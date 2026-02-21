@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --flipkart-blue: #2874f0;
+  --flipkart-yellow: #ffe500;
+}
+
+body {
+  @apply bg-[#f1f3f6] text-gray-900 antialiased;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Flipkart-style buttons */
+.btn-primary {
+  @apply bg-[#ffe500] text-black font-semibold py-3 px-6 rounded shadow-sm hover:bg-yellow-400 transition;
+}
+.btn-secondary {
+  @apply bg-white border border-gray-300 text-black font-medium py-3 px-6 rounded shadow-sm hover:bg-gray-50 transition;
+}
