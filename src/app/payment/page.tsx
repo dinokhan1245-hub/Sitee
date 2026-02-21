@@ -19,23 +19,25 @@ function PaymentContent() {
   useEffect(() => {
     async function fetchQrCode() {
       console.log('Fetching QR code...');
-      if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
+      if (process.env.NEXT_PUBLIC_SUPABASE_URL && !process.env.NEXT_PUBLIC_SUPABASE_URL.includes('your-project')) {
         try {
           const { supabase } = await import('@/lib/supabase');
           const { data, error } = await supabase.from('settings').select('*').eq('id', 'qr_code').single();
           if (error) {
-            console.error('Error fetching QR code from Supabase:', error);
+            console.error('[SUPABASE] Error fetching QR code:', error);
           } else if (data) {
-            console.log('QR Code fetched successfully:', data.value);
+            console.log('[SUPABASE] QR Code found:', data.value);
             setQrCode(data.value);
           } else {
-            console.log('No QR code found in settings table.');
+            console.log('[SUPABASE] No QR code entry found in settings.');
           }
         } catch (err) {
-          console.error('Failed to import supabase or execute query:', err);
+          console.error('[SUPABASE] Connection failed:', err);
         }
       } else {
-        console.warn('NEXT_PUBLIC_SUPABASE_URL is not defined. Falling back to local/hardcoded.');
+        console.log('[LOCAL] Supabase URL not configured or using placeholder. Fetching disabled.');
+        // If we wanted to test the UI logic with a fake fetch:
+        // setTimeout(() => setQrCode('https://via.placeholder.com/150?text=Mock+QR'), 1000);
       }
     }
     fetchQrCode();
