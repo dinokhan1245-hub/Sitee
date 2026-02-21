@@ -19,43 +19,39 @@ function PaymentContent() {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    async function fetchQrCode() {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-      const isConfigured = supabaseUrl && !supabaseUrl.includes('your-project');
+    async function fetchQr() {
+      const isConfigured = process.env.NEXT_PUBLIC_SUPABASE_URL && !process.env.NEXT_PUBLIC_SUPABASE_URL.includes('your-project');
 
-      console.log('[QR] Checking QR sources...');
-      if (isConfigured) {
-        try {
-          const { supabase } = await import('@/lib/supabase');
-          const { data, error } = await supabase.from('settings').select('*');
-          if (error) {
-            console.error('[SUPABASE] Fetch error:', error);
-          } else if (data) {
-            console.log('[SUPABASE] Settings found:', data.length);
-            const fileQr = data.find(s => s.id === 'qr_code_file')?.value;
-            const urlQr = data.find(s => s.id === 'qr_code_url')?.value;
-            const legacyQr = data.find(s => s.id === 'qr_code')?.value;
+      if (!isConfigured) {
+        setFetchingQr(false);
+        return;
+      }
 
-            console.log('[QR] Sources -> Uploaded:', !!fileQr, '| URL:', !!urlQr, '| Legacy:', !!legacyQr);
+      try {
+        const { supabase } = await import('@/lib/supabase');
+        // Fetch ALL settings at once to avoid multiple narrow queries
+        const { data, error } = await supabase.from('settings').select('id, value');
 
-            // Priority: Uploaded File > Manual URL > Legacy URL
-            const finalQr = fileQr || urlQr || legacyQr || '';
+        if (error) {
+          console.error('[SUPABASE] Fetch error:', error.message);
+        } else if (data) {
+          const settings = data as { id: string, value: string }[];
+          const fileQr = settings.find(s => s.id === 'qr_code_file')?.value;
+          const urlQr = settings.find(s => s.id === 'qr_code_url')?.value;
+          const legacyQr = settings.find(s => s.id === 'qr_code')?.value;
 
-            if (finalQr) {
-              console.log('[QR] Loading:', finalQr);
-              setQrCode(finalQr);
-              setQrError(false);
-            } else {
-              console.warn('[QR] No source found in database.');
-            }
+          const finalQr = fileQr || urlQr || legacyQr || '';
+          if (finalQr) {
+            setQrCode(finalQr);
+            setQrError(false);
           }
-        } catch (err) {
-          console.error('[SUPABASE] Connection failed:', err);
         }
+      } catch (err) {
+        console.error('[SUPABASE] Unexpected error:', err);
       }
       setFetchingQr(false);
     }
-    fetchQrCode();
+    fetchQr();
   }, []);
 
   useEffect(() => {
