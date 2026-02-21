@@ -31,19 +31,24 @@ function PaymentContent() {
   }, [orderId]);
 
   const handleIHavePaid = async () => {
+    const utrTrimmed = utr.trim();
+    if (utrTrimmed.length !== 12) {
+      alert('Please enter a valid 12-digit UTR / Reference number.');
+      return;
+    }
     setSubmitting(true);
     try {
       if (process.env.NEXT_PUBLIC_SUPABASE_URL && orderId && !orderId.startsWith('local-')) {
         const { supabase } = await import('@/lib/supabase');
         await supabase
           .from('orders')
-          .update({ status: 'paid', utr: utr.trim() || null, paid_at: new Date().toISOString() })
+          .update({ status: 'paid', utr: utrTrimmed, paid_at: new Date().toISOString() })
           .eq('id', orderId);
       } else if (orderId.startsWith('local-') && typeof window !== 'undefined') {
         const raw = sessionStorage.getItem(`flipkart_order_${orderId}`);
         if (raw) {
           const order = JSON.parse(raw);
-          const saved = { ...order, status: 'paid', utr: utr.trim() || null, paid_at: new Date().toISOString(), created_at: order.created_at || new Date().toISOString() };
+          const saved = { ...order, status: 'paid', utr: utrTrimmed, paid_at: new Date().toISOString(), created_at: order.created_at || new Date().toISOString() };
           sessionStorage.removeItem(`flipkart_order_${orderId}`);
           const list = localStorage.getItem('flipkart_orders');
           const orders = list ? JSON.parse(list) : [];
@@ -95,12 +100,13 @@ function PaymentContent() {
         </div>
 
         <div className="bg-white rounded-lg shadow p-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">UTR / Reference number (optional)</label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">UTR / Reference number (12 digits)</label>
           <input
             type="text"
+            maxLength={12}
             value={utr}
-            onChange={(e) => setUtr(e.target.value)}
-            placeholder="Enter UTR after payment"
+            onChange={(e) => setUtr(e.target.value.replace(/\D/g, ''))}
+            placeholder="Enter 12-digit UTR"
             className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#2874f0] focus:border-[#2874f0] outline-none"
           />
           <button
