@@ -12,6 +12,7 @@ function PaymentContent() {
   const orderId = searchParams.get('order') || '';
   const [secondsLeft, setSecondsLeft] = useState(PAYMENT_DURATION_SEC);
   const [qrCode, setQrCode] = useState('');
+  const [fetchingQr, setFetchingQr] = useState(true);
   const [utr, setUtr] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
@@ -19,7 +20,7 @@ function PaymentContent() {
   useEffect(() => {
     async function fetchQrCode() {
       console.log('Fetching QR code...');
-      if (process.env.NEXT_PUBLIC_SUPABASE_URL && !process.env.NEXT_PUBLIC_SUPABASE_URL.includes('your-project')) {
+      if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
         try {
           const { supabase } = await import('@/lib/supabase');
           const { data, error } = await supabase.from('settings').select('*').eq('id', 'qr_code').single();
@@ -28,17 +29,12 @@ function PaymentContent() {
           } else if (data) {
             console.log('[SUPABASE] QR Code found:', data.value);
             setQrCode(data.value);
-          } else {
-            console.log('[SUPABASE] No QR code entry found in settings.');
           }
         } catch (err) {
           console.error('[SUPABASE] Connection failed:', err);
         }
-      } else {
-        console.log('[LOCAL] Supabase URL not configured or using placeholder. Fetching disabled.');
-        // If we wanted to test the UI logic with a fake fetch:
-        // setTimeout(() => setQrCode('https://via.placeholder.com/150?text=Mock+QR'), 1000);
       }
+      setFetchingQr(false);
     }
     fetchQrCode();
   }, []);
@@ -116,8 +112,13 @@ function PaymentContent() {
       <main className="max-w-lg mx-auto p-4 space-y-6">
         <div className="bg-white rounded-lg shadow p-6 text-center">
           <p className="text-sm text-gray-500 mb-2">Scan to pay</p>
-          <div className="w-48 h-48 mx-auto bg-gray-50 rounded-lg flex items-center justify-center text-gray-500 text-sm overflow-hidden border border-gray-100">
-            {qrCode ? (
+          <div className="w-48 h-48 mx-auto bg-gray-50 rounded-lg flex items-center justify-center text-gray-500 text-sm overflow-hidden border border-gray-100 relative">
+            {fetchingQr ? (
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-8 h-8 border-2 border-[#2874f0] border-t-transparent rounded-full animate-spin" />
+                <p className="text-[10px] text-gray-400">Loading QR...</p>
+              </div>
+            ) : qrCode ? (
               <img src={qrCode} alt="Payment QR Code" className="w-full h-full object-contain" />
             ) : (
               <div className="p-4 text-center">
