@@ -338,54 +338,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   ]
 },
 {
-  "id": "toy_variety_1771664536187_3330",
-  "name": "HLMT Teenagers LED Luxurious Fashion Silicone Digital Watch (Not smart watch) Smartwatch",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 1119,
-  "description": "HLMT Teenagers LED Luxurious Fashion Silicone Digital Watch (Not smart watch) Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Type": "Kids Smartwatch",
-    "Display": "Digital Touch Screen",
-    "Features": "Games, Camera, Alarm",
-    "Strap Material": "Soft Silicone",
-    "Battery": "Rechargeable included"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/variety_img_1771664535116_24_111.jpeg",
-  "images": [
-    "/images/products/variety_img_1771664535116_24_111.jpeg",
-    "/images/products/variety_img_1771664535225_25_166.jpeg",
-    "/images/products/variety_img_1771664535322_26_727.jpeg",
-    "/images/products/variety_img_1771664535422_27_84.jpeg"
-  ]
-},
-{
-  "id": "toy_variety_1771664536187_4353",
-  "name": "EDENSCOPE Teenagers LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch Smartwatch",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.6,
-  "review_count": 2485,
-  "description": "EDENSCOPE Teenagers LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Type": "Kids Smartwatch",
-    "Display": "Digital Touch Screen",
-    "Features": "Games, Camera, Alarm",
-    "Strap Material": "Soft Silicone",
-    "Battery": "Rechargeable included"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/variety_img_1771664535618_28_777.jpeg",
-  "images": [
-    "/images/products/variety_img_1771664535618_28_777.jpeg",
-    "/images/products/variety_img_1771664535721_29_39.jpeg",
-    "/images/products/variety_img_1771664535815_30_992.jpeg",
-    "/images/products/variety_img_1771664535906_31_55.jpeg"
-  ]
-},
-{
   "id": "toy_1771663931128_16",
   "name": "FunNstyle RC Racing Car for Kids | Fast Remote Control Toy",
   "price": 99,
@@ -722,30 +674,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   ]
 },
 {
-  "id": "toy_1771663931128_30",
-  "name": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels)",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.9,
-  "review_count": 1805,
-  "description": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels) is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663923727_120.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663923727_120.jpeg",
-    "/images/products/real_toy_img_1771663923735_121.jpeg",
-    "/images/products/real_toy_img_1771663923739_122.jpeg",
-    "/images/products/real_toy_img_1771663923841_123.jpeg"
-  ]
-},
-{
   "id": "toy_1771663931128_31",
   "name": "guptagoodies Defender Remote Control Car for Kids High Speed Rechargeable Off Road RC SUV Toy",
   "price": 99,
@@ -815,30 +743,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663924533_133.jpeg",
     "/images/products/real_toy_img_1771663924652_134.jpeg",
     "/images/products/real_toy_img_1771663924764_135.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_34",
-  "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.5,
-  "review_count": 2307,
-  "description": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663924894_136.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663924894_136.jpeg",
-    "/images/products/real_toy_img_1771663924898_137.jpeg",
-    "/images/products/real_toy_img_1771663925640_138.jpeg",
-    "/images/products/real_toy_img_1771663925646_139.jpeg"
   ]
 },
 {
@@ -962,30 +866,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   ]
 },
 {
-  "id": "toy_1771663931128_40",
-  "name": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels)",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.9,
-  "review_count": 1665,
-  "description": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels) is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663928242_160.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663928242_160.jpeg",
-    "/images/products/real_toy_img_1771663928250_161.jpeg",
-    "/images/products/real_toy_img_1771663928253_162.jpeg",
-    "/images/products/real_toy_img_1771663928354_163.jpeg"
-  ]
-},
-{
   "id": "toy_1771663931128_41",
   "name": "ZUNBELLA Mini Monster Truck Friction Powered Push & Go 360° Truck TOy For Kids",
   "price": 99,
@@ -1055,54 +935,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663929138_173.jpeg",
     "/images/products/real_toy_img_1771663929230_174.jpeg",
     "/images/products/real_toy_img_1771663929347_175.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_44",
-  "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 1006,
-  "description": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663929447_176.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663929447_176.jpeg",
-    "/images/products/real_toy_img_1771663929450_177.jpeg",
-    "/images/products/real_toy_img_1771663929454_178.jpeg",
-    "/images/products/real_toy_img_1771663929542_179.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_45",
-  "name": "Wonder SportsCarRemote Controlled Racing Sports Car for Kids_Black",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 2375,
-  "description": "Wonder SportsCarRemote Controlled Racing Sports Car for Kids_Black is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663929545_180.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663929545_180.jpeg",
-    "/images/products/real_toy_img_1771663929549_181.jpeg",
-    "/images/products/real_toy_img_1771663929552_182.jpeg",
-    "/images/products/real_toy_img_1771663929649_183.jpeg"
   ]
 },
 {
@@ -1178,27 +1010,195 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   ]
 },
 {
-  "id": "toy_1771663931128_49",
-  "name": "PAPASpace 2-in-1 Transforming RC Car Robot One Click Deformation 360 Rotation Rechargeable",
+  "id": "toy_unique_1771665074108_9198",
+  "name": "Toyco 20 Learning Activities Kids Educational Laptop Toy, Letter Games Maths Memory",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.8,
+  "review_count": 1645,
+  "description": "Toyco 20 Learning Activities Kids Educational Laptop Toy, Letter Games Maths Memory is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Educational Kids Toy",
+    "Age Group": "3+ Years",
+    "Skills": "Cognitive & Motor Skills",
+    "Material": "Eco-friendly Materials",
+    "Durability": "Highly Durable"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_new_1771665069502_0_574.jpeg",
+  "images": [
+    "/images/products/variety_new_1771665069502_0_574.jpeg",
+    "/images/products/variety_new_1771665069708_1_266.jpeg",
+    "/images/products/variety_new_1771665069910_2_489.jpeg",
+    "/images/products/variety_new_1771665070102_3_768.jpeg"
+  ]
+},
+{
+  "id": "toy_unique_1771665074108_8714",
+  "name": "Miboo Educational Toy for Kids Alphabet Number and Word Learning",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.5,
+  "review_count": 2574,
+  "description": "Miboo Educational Toy for Kids Alphabet Number and Word Learning is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Educational Kids Toy",
+    "Age Group": "3+ Years",
+    "Skills": "Cognitive & Motor Skills",
+    "Material": "Eco-friendly Materials",
+    "Durability": "Highly Durable"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_new_1771665070229_4_400.jpeg",
+  "images": [
+    "/images/products/variety_new_1771665070229_4_400.jpeg",
+    "/images/products/variety_new_1771665070422_5_287.jpeg",
+    "/images/products/variety_new_1771665070529_6_424.jpeg",
+    "/images/products/variety_new_1771665070637_7_89.jpeg"
+  ]
+},
+{
+  "id": "toy_unique_1771665074108_1741",
+  "name": "INDIWARRIOR Wooden Puzzle Learning Educational Game Board for Kids, Puzzle Toys",
   "price": 99,
   "original_price": 1299,
   "rating": 4.7,
-  "review_count": 1648,
-  "description": "PAPASpace 2-in-1 Transforming RC Car Robot One Click Deformation 360 Rotation Rechargeable is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "review_count": 2864,
+  "description": "INDIWARRIOR Wooden Puzzle Learning Educational Game Board for Kids, Puzzle Toys is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
   "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
+    "Type": "Educational Kids Toy",
+    "Age Group": "3+ Years",
+    "Skills": "Cognitive & Motor Skills",
+    "Material": "Eco-friendly Materials",
+    "Durability": "Highly Durable"
   },
   "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663930717_196.jpeg",
+  "image_url": "/images/products/variety_new_1771665071014_8_112.jpeg",
   "images": [
-    "/images/products/real_toy_img_1771663930717_196.jpeg",
-    "/images/products/real_toy_img_1771663930721_197.jpeg",
-    "/images/products/real_toy_img_1771663930725_198.jpeg",
-    "/images/products/real_toy_img_1771663930872_199.jpeg"
+    "/images/products/variety_new_1771665071014_8_112.jpeg",
+    "/images/products/variety_new_1771665071139_9_116.jpeg",
+    "/images/products/variety_new_1771665071238_10_511.jpeg",
+    "/images/products/variety_new_1771665071505_11_637.jpeg"
+  ]
+},
+{
+  "id": "toy_unique_1771665074108_4284",
+  "name": "Eclet Bullet Educational & Learning Activity Building Blocks Set Game Toys for kids",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.8,
+  "review_count": 1905,
+  "description": "Eclet Bullet Educational & Learning Activity Building Blocks Set Game Toys for kids is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Educational Kids Toy",
+    "Age Group": "3+ Years",
+    "Skills": "Cognitive & Motor Skills",
+    "Material": "Eco-friendly Materials",
+    "Durability": "Highly Durable"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_new_1771665071634_12_324.jpeg",
+  "images": [
+    "/images/products/variety_new_1771665071634_12_324.jpeg",
+    "/images/products/variety_new_1771665071740_13_309.jpeg",
+    "/images/products/variety_new_1771665071855_14_443.jpeg",
+    "/images/products/variety_new_1771665072000_15_42.jpeg"
+  ]
+},
+{
+  "id": "toy_unique_1771665074108_7835",
+  "name": "Akvanar New Wooden Four Color Matching Game | Learning and Educational Toys for Kids",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.9,
+  "review_count": 2700,
+  "description": "Akvanar New Wooden Four Color Matching Game | Learning and Educational Toys for Kids is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Educational Kids Toy",
+    "Age Group": "3+ Years",
+    "Skills": "Cognitive & Motor Skills",
+    "Material": "Eco-friendly Materials",
+    "Durability": "Highly Durable"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_new_1771665072103_16_707.jpeg",
+  "images": [
+    "/images/products/variety_new_1771665072103_16_707.jpeg",
+    "/images/products/variety_new_1771665072236_17_690.jpeg",
+    "/images/products/variety_new_1771665072481_18_960.jpeg",
+    "/images/products/variety_new_1771665072581_19_568.jpeg"
+  ]
+},
+{
+  "id": "toy_unique_1771665074108_9053",
+  "name": "KOBBET Educational Laptop Toys for Kids Study Game Toy for Kids Pre-School Learning Toy",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.7,
+  "review_count": 1010,
+  "description": "KOBBET Educational Laptop Toys for Kids Study Game Toy for Kids Pre-School Learning Toy is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Educational Kids Toy",
+    "Age Group": "3+ Years",
+    "Skills": "Cognitive & Motor Skills",
+    "Material": "Eco-friendly Materials",
+    "Durability": "Highly Durable"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_new_1771665072702_20_684.jpeg",
+  "images": [
+    "/images/products/variety_new_1771665072702_20_684.jpeg",
+    "/images/products/variety_new_1771665072829_21_744.jpeg",
+    "/images/products/variety_new_1771665072927_22_729.jpeg",
+    "/images/products/variety_new_1771665073053_23_464.jpeg"
+  ]
+},
+{
+  "id": "toy_unique_1771665074108_3798",
+  "name": "Karnavati Traders Children Learning Laptop Kids Pre-School Tablet Educational Computer Game Study Toy to Learn The Alphabet With Images Sound And Spelling (Pink)",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.7,
+  "review_count": 2933,
+  "description": "Karnavati Traders Children Learning Laptop Kids Pre-School Tablet Educational Computer Game Study Toy to Learn The Alphabet With Images Sound And Spelling (Pink) is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Educational Kids Toy",
+    "Age Group": "3+ Years",
+    "Skills": "Cognitive & Motor Skills",
+    "Material": "Eco-friendly Materials",
+    "Durability": "Highly Durable"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_new_1771665073172_24_144.jpeg",
+  "images": [
+    "/images/products/variety_new_1771665073172_24_144.jpeg",
+    "/images/products/variety_new_1771665073298_25_514.jpeg",
+    "/images/products/variety_new_1771665073302_26_498.jpeg",
+    "/images/products/variety_new_1771665073427_27_167.jpeg"
+  ]
+},
+{
+  "id": "toy_unique_1771665074108_9421",
+  "name": "PATRANI FASHION Children Learning Laptop Kids Pre-School Tablet Educational Computer Game Study Toy to Learn The Alphabet With Images Sound And Spelling (Multicolor)",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.6,
+  "review_count": 1515,
+  "description": "PATRANI FASHION Children Learning Laptop Kids Pre-School Tablet Educational Computer Game Study Toy to Learn The Alphabet With Images Sound And Spelling (Multicolor) is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Educational Kids Toy",
+    "Age Group": "3+ Years",
+    "Skills": "Cognitive & Motor Skills",
+    "Material": "Eco-friendly Materials",
+    "Durability": "Highly Durable"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_new_1771665073552_28_356.jpeg",
+  "images": [
+    "/images/products/variety_new_1771665073552_28_356.jpeg",
+    "/images/products/variety_new_1771665073555_29_120.jpeg",
+    "/images/products/variety_new_1771665073662_30_621.jpeg",
+    "/images/products/variety_new_1771665073778_31_637.jpeg"
   ]
 }
 ];
