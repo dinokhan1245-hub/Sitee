@@ -11,9 +11,35 @@ function PaymentContent() {
   const router = useRouter();
   const orderId = searchParams.get('order') || '';
   const [secondsLeft, setSecondsLeft] = useState(PAYMENT_DURATION_SEC);
+  const [qrCode, setQrCode] = useState('');
   const [utr, setUtr] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    async function fetchQrCode() {
+      console.log('Fetching QR code...');
+      if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
+        try {
+          const { supabase } = await import('@/lib/supabase');
+          const { data, error } = await supabase.from('settings').select('*').eq('id', 'qr_code').single();
+          if (error) {
+            console.error('Error fetching QR code from Supabase:', error);
+          } else if (data) {
+            console.log('QR Code fetched successfully:', data.value);
+            setQrCode(data.value);
+          } else {
+            console.log('No QR code found in settings table.');
+          }
+        } catch (err) {
+          console.error('Failed to import supabase or execute query:', err);
+        }
+      } else {
+        console.warn('NEXT_PUBLIC_SUPABASE_URL is not defined. Falling back to local/hardcoded.');
+      }
+    }
+    fetchQrCode();
+  }, []);
 
   useEffect(() => {
     if (!orderId) return;
@@ -88,8 +114,12 @@ function PaymentContent() {
       <main className="max-w-lg mx-auto p-4 space-y-6">
         <div className="bg-white rounded-lg shadow p-6 text-center">
           <p className="text-sm text-gray-500 mb-2">Scan to pay</p>
-          <div className="w-48 h-48 mx-auto bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
-            Add your merchant QR here
+          <div className="w-48 h-48 mx-auto bg-gray-50 rounded-lg flex items-center justify-center text-gray-500 text-sm overflow-hidden border border-gray-100">
+            {qrCode ? (
+              <img src={qrCode} alt="Payment QR Code" className="w-full h-full object-contain" />
+            ) : (
+              <div className="p-4 text-center">Add your merchant QR here</div>
+            )}
           </div>
           <p className="mt-3 font-semibold text-gray-900">₹99</p>
           {!expired ? (
