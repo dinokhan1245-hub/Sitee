@@ -23,22 +23,31 @@ function PaymentContent() {
       const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
       const isConfigured = supabaseUrl && !supabaseUrl.includes('your-project');
 
-      console.log('[QR] Fetching QR code settings...');
+      console.log('[QR] Checking QR sources...');
       if (isConfigured) {
         try {
           const { supabase } = await import('@/lib/supabase');
           const { data, error } = await supabase.from('settings').select('*');
           if (error) {
-            console.error('[SUPABASE] Error fetching QR code:', error);
+            console.error('[SUPABASE] Fetch error:', error);
           } else if (data) {
+            console.log('[SUPABASE] Settings found:', data.length);
             const fileQr = data.find(s => s.id === 'qr_code_file')?.value;
             const urlQr = data.find(s => s.id === 'qr_code_url')?.value;
             const legacyQr = data.find(s => s.id === 'qr_code')?.value;
 
+            console.log('[QR] Sources -> Uploaded:', !!fileQr, '| URL:', !!urlQr, '| Legacy:', !!legacyQr);
+
+            // Priority: Uploaded File > Manual URL > Legacy URL
             const finalQr = fileQr || urlQr || legacyQr || '';
-            console.log('[SUPABASE] Final QR used:', finalQr);
-            setQrCode(finalQr);
-            setQrError(false);
+
+            if (finalQr) {
+              console.log('[QR] Loading:', finalQr);
+              setQrCode(finalQr);
+              setQrError(false);
+            } else {
+              console.warn('[QR] No source found in database.');
+            }
           }
         } catch (err) {
           console.error('[SUPABASE] Connection failed:', err);

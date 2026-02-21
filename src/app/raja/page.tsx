@@ -81,7 +81,7 @@ export default function AdminPage() {
           .upload(filePath, qrFile, { upsert: true });
 
         if (uploadError) {
-          alert(`Failed to upload image: ${uploadError.message}. Make sure you created the 'public-assets' storage bucket in Supabase.`);
+          alert(`Failed to upload: ${uploadError.message}`);
           setSavingQr(false);
           return;
         }
@@ -90,15 +90,29 @@ export default function AdminPage() {
           .from('public-assets')
           .getPublicUrl(filePath);
 
-        await supabase.from('settings').upsert({ id: 'qr_code_file', value: publicUrl });
+        // Save UPLOADED setting and CLEAR URL settings to ensure priority
+        await Promise.all([
+          supabase.from('settings').upsert({ id: 'qr_code_file', value: publicUrl }),
+          supabase.from('settings').delete().eq('id', 'qr_code_url'),
+          supabase.from('settings').delete().eq('id', 'qr_code'), // Clear legacy
+        ]);
+
         setQrStorageUrl(publicUrl);
+        setQrUrl('');
         setQrFile(null);
-        alert('Image uploaded and saved! It will take priority over the URL.');
+        alert('Image saved! It is now the ONLY active QR source.');
       } else if (qrUrl.trim()) {
-        await supabase.from('settings').upsert({ id: 'qr_code_url', value: qrUrl.trim() });
-        // Also clear legacy if exists
-        await supabase.from('settings').upsert({ id: 'qr_code', value: qrUrl.trim() });
-        alert('QR URL updated successfully!');
+        const urlToSave = qrUrl.trim();
+        // Save URL setting and CLEAR UPLOADED setting
+        await Promise.all([
+          supabase.from('settings').upsert({ id: 'qr_code_url', value: urlToSave }),
+          supabase.from('settings').upsert({ id: 'qr_code', value: urlToSave }), // Sync legacy
+          supabase.from('settings').delete().eq('id', 'qr_code_file'),
+        ]);
+
+        setQrUrl(urlToSave);
+        setQrStorageUrl('');
+        alert('URL saved! Uploaded image (if any) has been removed.');
       }
     } else {
       alert('Supabase not connected. Cannot save setting.');
