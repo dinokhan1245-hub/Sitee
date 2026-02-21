@@ -118,7 +118,10 @@ function PaymentContent() {
             {qrCode ? (
               <img src={qrCode} alt="Payment QR Code" className="w-full h-full object-contain" />
             ) : (
-              <div className="p-4 text-center">Add your merchant QR here</div>
+              <div className="p-4 text-center">
+                <p className="font-medium text-gray-400">QR Code Not Set</p>
+                <p className="text-[10px] mt-1 text-gray-400">Please upload your payment QR in the Admin Panel (/raja)</p>
+              </div>
             )}
           </div>
           <p className="mt-3 font-semibold text-gray-900">₹99</p>
