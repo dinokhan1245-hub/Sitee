@@ -24,11 +24,10 @@ async function scrapeRealToys() {
         const cards = document.querySelectorAll('div[data-id] a');
         for (let i = 0; i < cards.length; i++) {
             const href = cards[i].href;
-            // Don't grab internal nav links, ensure it looks like a product link
             if (href && href.includes('/p/') && !links.includes(href)) {
                 links.push(href);
             }
-            if (links.length >= 8) break;
+            if (links.length >= 15) break;
         }
         return links;
     });
@@ -42,11 +41,33 @@ async function scrapeRealToys() {
     console.log(`Found ${productLinks.length} product links. Scraping details...`);
     const scrapedProducts = [];
 
+    // Setup local image dir
+    const imgDir = path.join(__dirname, 'public', 'images', 'products');
+    if (!fs.existsSync(imgDir)) {
+        fs.mkdirSync(imgDir, { recursive: true });
+    }
+
+    // Helper to download image
+    const https = require('https');
+    const downloadImage = (url, filepath) => {
+        return new Promise((resolve, reject) => {
+            https.get(url, (res) => {
+                if (res.statusCode === 200) {
+                    res.pipe(fs.createWriteStream(filepath))
+                        .on('error', reject)
+                        .once('close', () => resolve(filepath));
+                } else {
+                    res.resume();
+                    reject(new Error(`Request Failed With a Status Code: ${res.statusCode}`));
+                }
+            }).on('error', reject);
+        });
+    };
+
     for (let i = 0; i < productLinks.length; i++) {
         console.log(`Scraping product ${i + 1}/${productLinks.length}...`);
         try {
             await page.goto(productLinks[i], { waitUntil: 'domcontentloaded', timeout: 30000 });
-
             await new Promise(r => setTimeout(r, 2000));
 
             const productData = await page.evaluate((idIndex) => {
@@ -56,16 +77,22 @@ async function scrapeRealToys() {
                 };
 
                 const title = getText('span.VU-ZEz, span.B_NuCI, h1') || `Premium Remote Control Toy ${idIndex + 1}`;
+                const rawPrice = getText('div.Nx9bqj.CxhGGd') || '₹499';
+                const rawOriginalPrice = getText('div.yRaY8j.A60-Kx') || '₹1,299';
+
+                const parsePrice = (str) => parseInt(str.replace(/[^0-9]/g, '')) || 0;
+                let price = parsePrice(rawPrice);
+                let originalPrice = parsePrice(rawOriginalPrice);
+
+                if (price === 0) price = 499 + Math.floor(Math.random() * 500);
+                if (originalPrice === 0 || originalPrice <= price) originalPrice = price + 500;
 
                 const images = [];
-
-                // Flipkart thumbnail images often have class classes like q6DClP, vXRm-m, etc
                 const imgEls = document.querySelectorAll('img.q6DClP, img.vXRm-m, img._396cs4, div._1A_Q_r img, div._3YNWH1 img, div._3kidJX img');
 
                 imgEls.forEach(img => {
                     let src = img.getAttribute('src') || img.getAttribute('data-src') || '';
                     if (src && !src.includes('data:image') && !src.includes('placeholder')) {
-                        // Try to fetch highest res (832x832 usually)
                         src = src.replace(/\/\d+\/\d+\//, '/832/832/');
                         if (!images.includes(src)) {
                             images.push(src);
@@ -73,37 +100,64 @@ async function scrapeRealToys() {
                     }
                 });
 
-                const finalImages = images.slice(0, 4);
+                // Get explicit highlights
+                const highlightEls = document.querySelectorAll('div.x-dVbu, li._21Ahn-');
+                const rawHighlights = Array.from(highlightEls).map(el => el.innerText.trim()).filter(t => t);
+
+                const highlightsObj = {};
+                rawHighlights.slice(0, 5).forEach((h, idx) => {
+                    const parts = h.split(':');
+                    if (parts.length > 1) {
+                        highlightsObj[parts[0].trim()] = parts.slice(1).join(':').trim();
+                    } else {
+                        highlightsObj[`Feature ${idx + 1}`] = h;
+                    }
+                });
+
+                // Fallback highlights if Flipkart blocks the scrape
+                if (Object.keys(highlightsObj).length === 0) {
+                    highlightsObj["Quality"] = "Premium Grade ABS Material";
+                    highlightsObj["Battery"] = "Rechargeable 500mAh Included";
+                    highlightsObj["Control Range"] = "Up to 50 meters";
+                    highlightsObj["Safety"] = "Non-Toxic, BPA Free";
+                }
 
                 return {
-                    id: (idIndex + 1).toString(),
+                    id: 'new_toy_' + Date.now() + '_' + idIndex,
                     name: title,
-                    price: 99,
-                    original_price: Math.floor(Math.random() * (1500 - 400 + 1)) + 400,
-                    rating: 4.5 + (Math.random() * 0.4),
+                    price: price,
+                    original_price: originalPrice,
+                    rating: 4.0 + (Math.random() * 0.9),
                     review_count: Math.floor(Math.random() * 3000) + 100,
-                    description: getText('div._1mXcCf, div.X3BRjv') || "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
-                    images: finalImages,
-                    highlights: {
-                        "Quality": "Premium Grade",
-                        "Safety": "Non-Toxic Materials",
-                        "Battery": "Rechargeable included",
-                        "Delivery": "Next Day Delivery"
-                    },
+                    description: getText('div._1mXcCf, div.X3BRjv') || title + " is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+                    images: images,
+                    highlights: highlightsObj,
                     badge: "Assured",
-                    image_url: finalImages.length > 0 ? finalImages[0] : ''
+                    image_url: images.length > 0 ? images[0] : ''
                 };
             }, i);
 
-            if (productData.images.length === 0) {
-                const fallbackImg = 'https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg';
-                productData.images = [fallbackImg, fallbackImg, fallbackImg, fallbackImg];
-                productData.image_url = fallbackImg;
-            } else while (productData.images.length < 4) {
-                productData.images.push(productData.images[0]);
+            // Handle image logic
+            let remoteImageUrl = productData.image_url;
+            if (!remoteImageUrl) {
+                remoteImageUrl = 'https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg';
             }
 
             productData.rating = parseFloat(productData.rating.toFixed(1));
+
+            // Download image
+            const localFilename = `${productData.id}.webp`;
+            const localPath = path.join(imgDir, localFilename);
+            try {
+                await downloadImage(remoteImageUrl, localPath);
+                console.log(`Saved image for ${productData.name} -> ${localFilename}`);
+                // Modify public JSON path
+                productData.image_url = `/images/products/${localFilename}`;
+                productData.images = [productData.image_url, productData.image_url, productData.image_url, productData.image_url];
+            } catch (e) {
+                console.log('Failed to download image, using remote fallback URL', e.message);
+            }
+
             scrapedProducts.push(productData);
 
         } catch (err) {
@@ -112,11 +166,8 @@ async function scrapeRealToys() {
     }
 
     console.log('Done scraping. Formatting and saving...');
-
-    const outputContent = `import type { Product } from './supabase';\n\nexport const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = ${JSON.stringify(scrapedProducts, null, 2)};\n`;
-
-    fs.writeFileSync(path.join(__dirname, 'src', 'lib', 'products.ts'), outputContent);
-    console.log('Successfully updated src/lib/products.ts');
+    fs.writeFileSync(path.join(__dirname, 'new_toys.json'), JSON.stringify(scrapedProducts, null, 2));
+    console.log('Successfully saved scraped data to new_toys.json');
 
     await browser.close();
 }

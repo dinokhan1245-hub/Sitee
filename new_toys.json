@@ -1,0 +1,272 @@
+[
+  {
+    "id": "new_toy_1771655179090_0",
+    "name": "Premium Remote Control Toy 1",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.9,
+    "review_count": 2720,
+    "description": "Premium Remote Control Toy 1 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655182494_1",
+    "name": "Premium Remote Control Toy 2",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.2,
+    "review_count": 2212,
+    "description": "Premium Remote Control Toy 2 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655185719_2",
+    "name": "Premium Remote Control Toy 3",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.6,
+    "review_count": 3027,
+    "description": "Premium Remote Control Toy 3 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655188750_3",
+    "name": "Premium Remote Control Toy 4",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.3,
+    "review_count": 2811,
+    "description": "Premium Remote Control Toy 4 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655191681_4",
+    "name": "Premium Remote Control Toy 5",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4,
+    "review_count": 856,
+    "description": "Premium Remote Control Toy 5 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655194660_5",
+    "name": "Premium Remote Control Toy 6",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.3,
+    "review_count": 2256,
+    "description": "Premium Remote Control Toy 6 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655197748_6",
+    "name": "Premium Remote Control Toy 7",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.8,
+    "review_count": 3040,
+    "description": "Premium Remote Control Toy 7 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655200724_7",
+    "name": "Premium Remote Control Toy 8",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.8,
+    "review_count": 1113,
+    "description": "Premium Remote Control Toy 8 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655203582_8",
+    "name": "Premium Remote Control Toy 9",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.5,
+    "review_count": 1189,
+    "description": "Premium Remote Control Toy 9 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655206428_9",
+    "name": "Premium Remote Control Toy 10",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.7,
+    "review_count": 1735,
+    "description": "Premium Remote Control Toy 10 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655209512_10",
+    "name": "Premium Remote Control Toy 11",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.1,
+    "review_count": 2208,
+    "description": "Premium Remote Control Toy 11 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655212549_11",
+    "name": "Premium Remote Control Toy 12",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.8,
+    "review_count": 3066,
+    "description": "Premium Remote Control Toy 12 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655215491_12",
+    "name": "Premium Remote Control Toy 13",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.1,
+    "review_count": 1887,
+    "description": "Premium Remote Control Toy 13 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655218359_13",
+    "name": "Premium Remote Control Toy 14",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.2,
+    "review_count": 1384,
+    "description": "Premium Remote Control Toy 14 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  },
+  {
+    "id": "new_toy_1771655221179_14",
+    "name": "Premium Remote Control Toy 15",
+    "price": 499,
+    "original_price": 1299,
+    "rating": 4.3,
+    "review_count": 1698,
+    "description": "Premium Remote Control Toy 15 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
+    "images": [],
+    "highlights": {
+      "Quality": "Premium Grade ABS Material",
+      "Battery": "Rechargeable 500mAh Included",
+      "Control Range": "Up to 50 meters",
+      "Safety": "Non-Toxic, BPA Free"
+    },
+    "badge": "Assured",
+    "image_url": ""
+  }
+]
