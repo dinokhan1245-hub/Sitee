@@ -1,3 +1,35 @@
+-- Recreate schema if not exists
+CREATE TABLE IF NOT EXISTS products (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name TEXT NOT NULL,
+  description TEXT,
+  price INTEGER NOT NULL DEFAULT 99,
+  original_price INTEGER,
+  rating DECIMAL(2,1) DEFAULT 4.2,
+  review_count INTEGER DEFAULT 0,
+  badge TEXT,
+  images TEXT[] DEFAULT '{}',
+  highlights JSONB DEFAULT '{}'::jsonb,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  image_url TEXT
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  product_id UUID REFERENCES products(id),
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  address TEXT NOT NULL,
+  city TEXT NOT NULL,
+  zip_code TEXT NOT NULL,
+  phone TEXT,
+  status TEXT NOT NULL DEFAULT 'pending_payment',
+  utr TEXT,
+  paid_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  payment_expires_at TIMESTAMPTZ
+);
+
 DELETE FROM products;
 
 INSERT INTO products (id, name, description, price, original_price, rating, review_count, badge, image_url, images, highlights) VALUES ('toy_variety_1771664536187_665', 'LEGO Technic Backhoe Loader Construction Toy Vehicle Set 42197 (104 Blocks)', 'LEGO Technic Backhoe Loader Construction Toy Vehicle Set 42197 (104 Blocks) is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.', 99, 1299, 4.8, 2201, 'Assured', '/images/products/variety_img_1771664514942_0_211.jpeg', ARRAY['/images/products/variety_img_1771664514942_0_211.jpeg','/images/products/variety_img_1771664515110_1_819.jpeg','/images/products/variety_img_1771664515311_2_975.jpeg','/images/products/variety_img_1771664515431_3_767.jpeg'], '{"Type":"Building Blocks","Age Group":"5+ Years","Skills":"Creativity & Hand-Eye Coordination","Material":"Premium Non-Toxic Plastic","Pieces":"Multiple Interlocking Blocks"}'::jsonb);

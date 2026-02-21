@@ -16,6 +16,7 @@ function CheckoutForm() {
     address: '',
     city: '',
     zip_code: '',
+    phone: '',
   });
 
   const INDIAN_STATES = [
@@ -30,13 +31,18 @@ function CheckoutForm() {
 
   const handleProceed = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.first_name.trim() || !form.last_name.trim() || !form.address.trim() || !form.city.trim() || !form.zip_code.trim()) {
+    if (!form.first_name.trim() || !form.last_name.trim() || !form.address.trim() || !form.city.trim() || !form.zip_code.trim() || !form.phone.trim()) {
       alert('Please fill all fields.');
       return;
     }
     const pinRegex = /^[1-9][0-9]{5}$/;
     if (!pinRegex.test(form.zip_code.trim())) {
       alert('Please enter a valid 6-digit PIN code.');
+      return;
+    }
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(form.phone.trim())) {
+      alert('Please enter a valid 10-digit mobile number.');
       return;
     }
     setLoading(true);
@@ -47,6 +53,7 @@ function CheckoutForm() {
       address: form.address.trim(),
       city: form.city, // We are storing the state in the city column for now to avoid schema changes
       zip_code: form.zip_code.trim(),
+      phone: `+91${form.phone.trim()}`,
       status: 'pending_payment' as const,
       payment_expires_at: new Date(Date.now() + 5 * 60 * 1000).toISOString(),
     };
@@ -160,6 +167,22 @@ function CheckoutForm() {
                 placeholder="6 digits"
               />
             </div>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Mobile number</label>
+            <div className="flex items-center">
+              <span className="px-3 py-2 border border-r-0 border-gray-300 bg-gray-50 text-gray-500 rounded-l">+91</span>
+              <input
+                type="text"
+                required
+                maxLength={10}
+                value={form.phone}
+                onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value.replace(/\D/g, '') }))}
+                className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-r focus:ring-2 focus:ring-[#2874f0] focus:border-[#2874f0] outline-none"
+                placeholder="10 digit number"
+              />
+            </div>
+            <p className="mt-1 text-xs text-gray-500">Used for delivery purposes</p>
           </div>
           <button
             type="submit"

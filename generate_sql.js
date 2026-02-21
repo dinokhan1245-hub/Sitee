@@ -4,7 +4,41 @@ const match = content.match(/export const FALLBACK_PRODUCTS[^\[]*\[([\s\S]*)\];/
 
 if (match) {
     const arr = eval('[' + match[1] + ']');
-    let sql = 'DELETE FROM products;\n\n';
+    let sql = `-- Recreate schema if not exists
+CREATE TABLE IF NOT EXISTS products (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name TEXT NOT NULL,
+  description TEXT,
+  price INTEGER NOT NULL DEFAULT 99,
+  original_price INTEGER,
+  rating DECIMAL(2,1) DEFAULT 4.2,
+  review_count INTEGER DEFAULT 0,
+  badge TEXT,
+  images TEXT[] DEFAULT '{}',
+  highlights JSONB DEFAULT '{}'::jsonb,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  image_url TEXT
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  product_id UUID REFERENCES products(id),
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  address TEXT NOT NULL,
+  city TEXT NOT NULL,
+  zip_code TEXT NOT NULL,
+  phone TEXT,
+  status TEXT NOT NULL DEFAULT 'pending_payment',
+  utr TEXT,
+  paid_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  payment_expires_at TIMESTAMPTZ
+);
+
+DELETE FROM products;
+
+`;
 
     arr.forEach(p => {
         const imgs = p.images ? p.images.map(i => "'" + i + "'").join(',') : "'" + p.image_url + "'";

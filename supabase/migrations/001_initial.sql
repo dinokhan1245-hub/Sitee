@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS orders (
   address TEXT NOT NULL,
   city TEXT NOT NULL,
   zip_code TEXT NOT NULL,
+  phone TEXT,
   status TEXT NOT NULL DEFAULT 'pending_payment', -- pending_payment | paid | cancelled
   utr TEXT,
   paid_at TIMESTAMPTZ,
