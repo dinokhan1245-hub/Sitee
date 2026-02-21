@@ -194,7 +194,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.9,
   "review_count": 2720,
   "description": "Premium Remote Control Toy 1 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -202,7 +206,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg"
 },
   {
   "id": "new_toy_1771655182494_1",
@@ -212,7 +216,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.2,
   "review_count": 2212,
   "description": "Premium Remote Control Toy 2 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -220,7 +228,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
 },
   {
   "id": "new_toy_1771655185719_2",
@@ -230,7 +238,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.6,
   "review_count": 3027,
   "description": "Premium Remote Control Toy 3 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -238,7 +250,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg"
 },
   {
   "id": "new_toy_1771655188750_3",
@@ -248,7 +260,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.3,
   "review_count": 2811,
   "description": "Premium Remote Control Toy 4 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -256,7 +272,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg"
 },
   {
   "id": "new_toy_1771655191681_4",
@@ -266,7 +282,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4,
   "review_count": 856,
   "description": "Premium Remote Control Toy 5 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -274,7 +294,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
 },
   {
   "id": "new_toy_1771655194660_5",
@@ -284,7 +304,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.3,
   "review_count": 2256,
   "description": "Premium Remote Control Toy 6 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -292,7 +316,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg"
 },
   {
   "id": "new_toy_1771655197748_6",
@@ -302,7 +326,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.8,
   "review_count": 3040,
   "description": "Premium Remote Control Toy 7 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -310,7 +338,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg"
 },
   {
   "id": "new_toy_1771655200724_7",
@@ -320,7 +348,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.8,
   "review_count": 1113,
   "description": "Premium Remote Control Toy 8 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -328,7 +360,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
 },
   {
   "id": "new_toy_1771655203582_8",
@@ -338,7 +370,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.5,
   "review_count": 1189,
   "description": "Premium Remote Control Toy 9 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -346,7 +382,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg"
 },
   {
   "id": "new_toy_1771655206428_9",
@@ -356,7 +392,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.7,
   "review_count": 1735,
   "description": "Premium Remote Control Toy 10 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -364,7 +404,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg"
 },
   {
   "id": "new_toy_1771655209512_10",
@@ -374,7 +414,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.1,
   "review_count": 2208,
   "description": "Premium Remote Control Toy 11 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -382,7 +426,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
 },
   {
   "id": "new_toy_1771655212549_11",
@@ -392,7 +436,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.8,
   "review_count": 3066,
   "description": "Premium Remote Control Toy 12 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -400,7 +448,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
 },
   {
   "id": "new_toy_1771655215491_12",
@@ -410,7 +458,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.1,
   "review_count": 1887,
   "description": "Premium Remote Control Toy 13 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/b/e/9/fast-modern-car-with-3d-light-remote-control-unbreakable-car-original-imahfp688euyz3n6.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -418,7 +470,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg"
 },
   {
   "id": "new_toy_1771655218359_13",
@@ -428,7 +480,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.2,
   "review_count": 1384,
   "description": "Premium Remote Control Toy 14 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/p/l/q/1-18-scale-remote-control-rock-crawler-2wd-off-road-rc-monster-original-imahfjx8g5y3zhb9.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -436,7 +492,7 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
 },
   {
   "id": "new_toy_1771655221179_14",
@@ -446,7 +502,11 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   "rating": 4.3,
   "review_count": 1698,
   "description": "Premium Remote Control Toy 15 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [],
+  "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/g/g/r/famous-car-steering-wheel-remote-control-car-for-kids-best-gift-original-imahyg3ygyvhyyzx.jpeg"
+    ],
   "highlights": {
     "Quality": "Premium Grade ABS Material",
     "Battery": "Rechargeable 500mAh Included",
@@ -454,6 +514,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "Safety": "Non-Toxic, BPA Free"
   },
   "badge": "Assured",
-  "image_url": ""
+  "image_url": "https://rukminim2.flixcart.com/image/832/832/xif0q/remote-control-toy/1/8/u/rechargeable-remote-control-rock-crawler-2-4-ghz-4wd-with-original-imahypggy94hh3zx.jpeg"
 }
 ];
