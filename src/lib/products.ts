@@ -24,7 +24,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663912149_2.jpeg",
     "/images/products/real_toy_img_1771663912166_3.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_1",
   "name": "ZUNBELLA 4WD Double Sided RC Smoke Stunt Drift Toy Car 360° Rotation Drift Toy For Kids",
   "price": 99,
@@ -47,7 +48,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663912255_6.jpeg",
     "/images/products/real_toy_img_1771663912288_7.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_2",
   "name": "Xcillince Toys RC Car Chargable| Fun RC Toy and Gift for Kids (Multicolour)",
   "price": 99,
@@ -70,7 +72,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663912352_10.jpeg",
     "/images/products/real_toy_img_1771663912381_11.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_3",
   "name": "Buddynjoy 3D lighting kids high speed rechargeable remote control Car for 3+ Years",
   "price": 99,
@@ -93,7 +96,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663912524_14.jpeg",
     "/images/products/real_toy_img_1771663912670_15.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_4",
   "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
   "price": 99,
@@ -116,7 +120,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663912766_18.jpeg",
     "/images/products/real_toy_img_1771663912789_19.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_5",
   "name": "Toy Tree Jesavi Enterprise Sensor Magic Induction RC Car Remote Control Toy with Lights & Music",
   "price": 99,
@@ -139,7 +144,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663912848_22.jpeg",
     "/images/products/real_toy_img_1771663912865_23.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_6",
   "name": "APJ enterprise Mini Stunt Car Toy for Kids Multicolor",
   "price": 99,
@@ -162,7 +168,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663912949_26.jpeg",
     "/images/products/real_toy_img_1771663912979_27.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_7",
   "name": "frendo High Speed 1:24 Scale Rechargeable Remote Car for Kids",
   "price": 99,
@@ -185,7 +192,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663913045_30.jpeg",
     "/images/products/real_toy_img_1771663913093_31.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_8",
   "name": "Xcillince Toys xt_Remote Control Car For Kids High Speed Racing Car With Stylish Looks",
   "price": 99,
@@ -208,7 +216,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663913161_34.jpeg",
     "/images/products/real_toy_img_1771663913182_35.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_9",
   "name": "ZUNBELLA 3D Super Transparent Car 360 Mechanical Rotation with Sound &Light Toys for Kids",
   "price": 99,
@@ -231,7 +240,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663913252_38.jpeg",
     "/images/products/real_toy_img_1771663913270_39.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_10",
   "name": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels)",
   "price": 99,
@@ -254,7 +264,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663913383_42.jpeg",
     "/images/products/real_toy_img_1771663913499_43.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_11",
   "name": "twist n turn 3D LIGHT CAR -BLUE",
   "price": 99,
@@ -277,7 +288,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663913660_46.jpeg",
     "/images/products/real_toy_img_1771663913663_47.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_12",
   "name": "Chaowbow Drift Stunt Remote Control Car Toy for Kids with Lights & Music|Rechargeable Car",
   "price": 99,
@@ -300,7 +312,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663913688_50.jpeg",
     "/images/products/real_toy_img_1771663913691_51.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_13",
   "name": "frendo High Speed 1:24 Scale Rechargeable Remote Car for Kids",
   "price": 99,
@@ -323,7 +336,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663913730_54.jpeg",
     "/images/products/real_toy_img_1771663913828_55.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_14",
   "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
   "price": 99,
@@ -346,7 +360,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663913939_58.jpeg",
     "/images/products/real_toy_img_1771663914050_59.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_15",
   "name": "Prikuna Multicolor Remote Control Car for Kids, 2-Way, Battery Operated",
   "price": 99,
@@ -369,7 +384,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663914350_62.jpeg",
     "/images/products/real_toy_img_1771663914457_63.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_16",
   "name": "FunNstyle RC Racing Car for Kids | Fast Remote Control Toy",
   "price": 99,
@@ -392,7 +408,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663914843_66.jpeg",
     "/images/products/real_toy_img_1771663914944_67.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_17",
   "name": "hda group RC Car Concept Musical and 3D Lights Kids Transparent CAR",
   "price": 99,
@@ -415,7 +432,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663915299_70.jpeg",
     "/images/products/real_toy_img_1771663915500_71.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_18",
   "name": "AAPEFLEX Stunt Vehicle 360°Rotating Rolling Electronic Radio RC Remote Control Toy Charging car Toys for Boys Kids (Green)",
   "price": 99,
@@ -438,7 +456,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663915948_74.jpeg",
     "/images/products/real_toy_img_1771663917137_75.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_19",
   "name": "Prikuna Remote Control Car for Kids, 2-Way Movement, Battery Operated, Remote Included",
   "price": 99,
@@ -461,7 +480,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663917499_78.jpeg",
     "/images/products/real_toy_img_1771663917618_79.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_20",
   "name": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels)",
   "price": 99,
@@ -484,7 +504,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663917749_82.jpeg",
     "/images/products/real_toy_img_1771663917949_83.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_21",
   "name": "Just97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_711",
   "price": 99,
@@ -507,7 +528,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663918290_86.jpeg",
     "/images/products/real_toy_img_1771663918294_87.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_22",
   "name": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_452",
   "price": 99,
@@ -530,7 +552,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663918516_90.jpeg",
     "/images/products/real_toy_img_1771663918519_91.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_23",
   "name": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_693",
   "price": 99,
@@ -553,7 +576,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663918747_94.jpeg",
     "/images/products/real_toy_img_1771663918847_95.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_24",
   "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
   "price": 99,
@@ -576,7 +600,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663918966_98.jpeg",
     "/images/products/real_toy_img_1771663919080_99.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_25",
   "name": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_518",
   "price": 99,
@@ -599,7 +624,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663919453_102.jpeg",
     "/images/products/real_toy_img_1771663919561_103.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_26",
   "name": "Twing enterprises Remote Control Racing Car with LED Lights, High Speed Toy Car for Kids",
   "price": 99,
@@ -622,7 +648,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663921929_106.jpeg",
     "/images/products/real_toy_img_1771663922065_107.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_27",
   "name": "RAGVEE CAR SET FAMOUS CAR TOYS KIDS",
   "price": 99,
@@ -645,7 +672,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663922447_110.jpeg",
     "/images/products/real_toy_img_1771663922566_111.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_28",
   "name": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_335",
   "price": 99,
@@ -668,7 +696,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663922922_114.jpeg",
     "/images/products/real_toy_img_1771663923055_115.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_29",
   "name": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_611",
   "price": 99,
@@ -691,7 +720,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663923426_118.jpeg",
     "/images/products/real_toy_img_1771663923523_119.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_30",
   "name": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels)",
   "price": 99,
@@ -714,7 +744,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663923739_122.jpeg",
     "/images/products/real_toy_img_1771663923841_123.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_31",
   "name": "guptagoodies Defender Remote Control Car for Kids High Speed Rechargeable Off Road RC SUV Toy",
   "price": 99,
@@ -737,7 +768,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663924189_126.jpeg",
     "/images/products/real_toy_img_1771663924192_127.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_32",
   "name": "RAMSHREE Die Cast Metal Sports Car Toy with LED Lights & Opening Doors for Kids",
   "price": 99,
@@ -760,7 +792,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663924424_130.jpeg",
     "/images/products/real_toy_img_1771663924427_131.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_33",
   "name": "FANSEEKART car rechargeable mist smoke RC racing car for kids with 2.4GHz remote control",
   "price": 99,
@@ -783,7 +816,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663924652_134.jpeg",
     "/images/products/real_toy_img_1771663924764_135.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_34",
   "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
   "price": 99,
@@ -806,7 +840,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663925640_138.jpeg",
     "/images/products/real_toy_img_1771663925646_139.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_35",
   "name": "Wonder SportsCarRemote Controlled Racing Sports Car for Kids_Black",
   "price": 99,
@@ -829,7 +864,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663926041_142.jpeg",
     "/images/products/real_toy_img_1771663926293_143.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_36",
   "name": "ABHITRADEMATE 3D Light Remote Control Car for Kids | High-Speed RC Racing Car with LED Lights",
   "price": 99,
@@ -852,7 +888,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663926626_146.jpeg",
     "/images/products/real_toy_img_1771663926739_147.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_37",
   "name": "TECHZAGE Pull Back Famous Ertiga Car Toy Car for Kids (Yellow)",
   "price": 99,
@@ -875,7 +912,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663927112_150.jpeg",
     "/images/products/real_toy_img_1771663927116_151.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_38",
   "name": "Myxomart 4x4 Rock Car, Spring wheels,1:18 scale, Remote control",
   "price": 99,
@@ -898,7 +936,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663927559_154.jpeg",
     "/images/products/real_toy_img_1771663927657_155.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_39",
   "name": "PAPASpace 2-in-1 Transforming RC Car Robot One Click Deformation 360 Rotation Rechargeable",
   "price": 99,
@@ -921,7 +960,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663928002_158.jpeg",
     "/images/products/real_toy_img_1771663928141_159.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_40",
   "name": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels)",
   "price": 99,
@@ -944,7 +984,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663928253_162.jpeg",
     "/images/products/real_toy_img_1771663928354_163.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_41",
   "name": "ZUNBELLA Mini Monster Truck Friction Powered Push & Go 360° Truck TOy For Kids",
   "price": 99,
@@ -967,7 +1008,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663928673_166.jpeg",
     "/images/products/real_toy_img_1771663928676_167.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_42",
   "name": "Meraz Bugatti Metal Toy Car – Elegant Black Diecast Model with Pull-Back Motion",
   "price": 99,
@@ -990,7 +1032,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663928920_170.jpeg",
     "/images/products/real_toy_img_1771663928924_171.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_43",
   "name": "Kiddie Castle Rechargeable Smoke Spray Rock Crawler RC Car with Light",
   "price": 99,
@@ -1013,7 +1056,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663929230_174.jpeg",
     "/images/products/real_toy_img_1771663929347_175.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_44",
   "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
   "price": 99,
@@ -1036,7 +1080,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663929454_178.jpeg",
     "/images/products/real_toy_img_1771663929542_179.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_45",
   "name": "Wonder SportsCarRemote Controlled Racing Sports Car for Kids_Black",
   "price": 99,
@@ -1059,7 +1104,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663929552_182.jpeg",
     "/images/products/real_toy_img_1771663929649_183.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_46",
   "name": "Bestie Toys Watch RC Car Toy,IR Cartoon Watch Vehicle Prevent Interference Wearable For kids",
   "price": 99,
@@ -1082,7 +1128,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663930028_186.jpeg",
     "/images/products/real_toy_img_1771663930031_187.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_47",
   "name": "DRUVAN AND DIVINE 3D Baby Gear Toy Car with 360° Rotation Mechanical,Sound,Music & Lights for Kids",
   "price": 99,
@@ -1105,7 +1152,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663930245_190.jpeg",
     "/images/products/real_toy_img_1771663930250_191.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_48",
   "name": "RADHAG Die Cast Metal Racing Car Toy with LED Lights, Open Doors Kids Gift",
   "price": 99,
@@ -1128,7 +1176,8 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663930448_194.jpeg",
     "/images/products/real_toy_img_1771663930565_195.jpeg"
   ]
-},\n{
+},
+{
   "id": "toy_1771663931128_49",
   "name": "PAPASpace 2-in-1 Transforming RC Car Robot One Click Deformation 360 Rotation Rechargeable",
   "price": 99,
@@ -1151,4 +1200,5 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663930725_198.jpeg",
     "/images/products/real_toy_img_1771663930872_199.jpeg"
   ]
-}\n];\n
+}
+];
