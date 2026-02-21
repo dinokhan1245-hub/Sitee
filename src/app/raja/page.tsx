@@ -157,8 +157,7 @@ export default function AdminPage() {
     <div className="min-h-screen bg-gray-50">
       <header className="sticky top-0 z-50 bg-gray-800 text-white px-4 py-3 flex items-center gap-3">
         <Link href="/" className="p-1 rounded hover:bg-white/10">←</Link>
-        <span className="font-medium">Admin panel</span>
-        <Link href="/orders" className="ml-auto text-sm text-[#ffe500]">My orders</Link>
+        <span className="font-medium flex-1">Admin panel</span>
       </header>
 
       <main className="max-w-4xl mx-auto p-4 space-y-8 pb-20">
