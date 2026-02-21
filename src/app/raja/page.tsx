@@ -7,7 +7,8 @@ import { supabase, type Order, type Product } from '@/lib/supabase';
 export default function AdminPage() {
   const [orders, setOrders] = useState<(Order & { product?: Product })[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
-  const [qrCode, setQrCode] = useState('');
+  const [qrUrl, setQrUrl] = useState('');
+  const [qrStorageUrl, setQrStorageUrl] = useState('');
   const [qrFile, setQrFile] = useState<File | null>(null);
   const [adminPassword, setAdminPassword] = useState('');
   const [loading, setLoading] = useState(true);
@@ -29,20 +30,25 @@ export default function AdminPage() {
 
     async function fetchData() {
       if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-        const [ordersRes, productsRes, qrRes, passRes] = await Promise.all([
+        const [ordersRes, productsRes, settingsRes] = await Promise.all([
           supabase.from('orders').select('*, product:products(*)').order('created_at', { ascending: false }),
           supabase.from('products').select('*').order('created_at'),
-          supabase.from('settings').select('*').eq('id', 'qr_code').single(),
-          supabase.from('settings').select('*').eq('id', 'admin_password').single(),
+          supabase.from('settings').select('*'),
         ]);
         setOrders((ordersRes.data as (Order & { product: Product })[]) || []);
         setProducts((productsRes.data as Product[]) || []);
-        if (qrRes.data) {
-          setQrCode(qrRes.data.value);
-        }
-        if (passRes.data) {
-          setDbPassword(passRes.data.value);
-          setAdminPassword(passRes.data.value);
+
+        const settings = settingsRes.data || [];
+        const qrUrlObj = settings.find(s => s.id === 'qr_code_url' || s.id === 'qr_code'); // Handle legacy 'qr_code'
+        const qrFileObj = settings.find(s => s.id === 'qr_code_file');
+        const passObj = settings.find(s => s.id === 'admin_password');
+
+        if (qrUrlObj) setQrUrl(qrUrlObj.value);
+        if (qrFileObj) setQrStorageUrl(qrFileObj.value);
+
+        if (passObj) {
+          setDbPassword(passObj.value);
+          setAdminPassword(passObj.value);
         } else {
           setAdminPassword(process.env.NEXT_PUBLIC_ADMIN_SECRET || 'admin123');
         }
@@ -64,9 +70,8 @@ export default function AdminPage() {
   const saveQrCode = async () => {
     setSavingQr(true);
     if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-      let finalUrl = qrCode;
-
       if (qrFile) {
+        // Upload File Path
         const fileExt = qrFile.name.split('.').pop();
         const fileName = `qr-code-${Date.now()}.${fileExt}`;
         const filePath = `admin/${fileName}`;
@@ -85,16 +90,27 @@ export default function AdminPage() {
           .from('public-assets')
           .getPublicUrl(filePath);
 
-        finalUrl = publicUrl;
+        await supabase.from('settings').upsert({ id: 'qr_code_file', value: publicUrl });
+        setQrStorageUrl(publicUrl);
+        setQrFile(null);
+        alert('Image uploaded and saved! It will take priority over the URL.');
+      } else if (qrUrl.trim()) {
+        await supabase.from('settings').upsert({ id: 'qr_code_url', value: qrUrl.trim() });
+        // Also clear legacy if exists
+        await supabase.from('settings').upsert({ id: 'qr_code', value: qrUrl.trim() });
+        alert('QR URL updated successfully!');
       }
-
-      await supabase.from('settings').upsert({ id: 'qr_code', value: finalUrl });
-      setQrCode(finalUrl);
-      setQrFile(null); // Clear selected file after successful save
-      alert('QR Code updated successfully!');
     } else {
       alert('Supabase not connected. Cannot save setting.');
     }
+    setSavingQr(false);
+  };
+
+  const clearQrFile = async () => {
+    if (!confirm('Are you sure you want to remove the uploaded image and use the URL instead?')) return;
+    setSavingQr(true);
+    await supabase.from('settings').delete().eq('id', 'qr_code_file');
+    setQrStorageUrl('');
     setSavingQr(false);
   };
 
@@ -169,64 +185,93 @@ export default function AdminPage() {
         {/* Settings Section */}
         <section>
           <h2 className="text-lg font-semibold text-gray-900 mb-3">Settings</h2>
-          <div className="bg-white rounded-lg shadow p-4">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Payment QR Code</label>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <div className="flex-1 space-y-2">
+          <div className="bg-white rounded-lg shadow p-4 space-y-6">
+
+            {/* Direct URL Section */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Option 1: Payment QR URL</label>
+              <div className="flex gap-2">
                 <input
                   type="url"
-                  value={qrCode}
-                  onChange={(e) => {
-                    setQrCode(e.target.value);
-                    setQrFile(null);
-                  }}
+                  value={qrUrl}
+                  onChange={(e) => setQrUrl(e.target.value)}
                   placeholder="Paste URL (e.g. https://example.com/qr.png)"
-                  className="w-full px-3 py-2 border border-gray-300 rounded text-sm outline-none focus:border-[#2874f0]"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded text-sm outline-none focus:border-[#2874f0]"
                 />
-
-                <div className="relative">
-                  <div className="absolute inset-0 flex items-center" aria-hidden="true">
-                    <div className="w-full border-t border-gray-200" />
-                  </div>
-                  <div className="relative flex justify-center text-xs">
-                    <span className="bg-white px-2 text-gray-400">OR UPLOAD FROM DEVICE</span>
-                  </div>
-                </div>
-
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => {
-                    if (e.target.files && e.target.files.length > 0) {
-                      setQrFile(e.target.files[0]);
-                      setQrCode(''); // Clear URL if they choose a file
-                    }
-                  }}
-                  className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-[#2874f0] hover:file:bg-blue-100"
-                />
-              </div>
-
-              <div className="flex sm:flex-col items-center sm:items-stretch sm:justify-start gap-3 w-full sm:w-auto mt-2 sm:mt-0">
                 <button
                   onClick={saveQrCode}
-                  disabled={savingQr || (!qrCode.trim() && !qrFile)}
-                  className="w-full px-6 py-2 bg-[#2874f0] text-white text-sm font-medium rounded hover:bg-blue-700 disabled:opacity-50"
+                  disabled={savingQr || !qrUrl.trim()}
+                  className="px-4 py-2 bg-[#2874f0] text-white text-sm font-medium rounded hover:bg-blue-700 disabled:opacity-50"
                 >
-                  {savingQr ? 'Saving...' : 'Save QR'}
+                  Save URL
                 </button>
               </div>
             </div>
 
-            {(qrCode || qrFile) && (
-              <div className="mt-4 p-3 bg-gray-50 border border-gray-100 rounded-md inline-block">
-                <p className="text-xs text-gray-500 mb-2 font-medium">QR Preview:</p>
-                <img
-                  src={qrFile ? URL.createObjectURL(qrFile) : qrCode}
-                  alt="QR Code Preview"
-                  className="w-32 h-32 object-contain border border-gray-200 rounded block bg-white"
-                />
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                <div className="w-full border-t border-gray-200" />
               </div>
-            )}
+              <div className="relative flex justify-center text-xs">
+                <span className="bg-white px-2 text-gray-400 font-medium">OR</span>
+              </div>
+            </div>
+
+            {/* Upload Section */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Option 2: Upload QR Image (Priority)</label>
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <div className="flex-1 w-full space-y-3">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      if (e.target.files && e.target.files.length > 0) {
+                        setQrFile(e.target.files[0]);
+                      }
+                    }}
+                    className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-[#2874f0] hover:file:bg-blue-100"
+                  />
+                  {qrFile && (
+                    <button
+                      onClick={saveQrCode}
+                      disabled={savingQr}
+                      className="w-full py-2 bg-green-600 text-white text-sm font-medium rounded hover:bg-green-700"
+                    >
+                      {savingQr ? 'Uploading...' : 'Upload & Save Image'}
+                    </button>
+                  )}
+                </div>
+
+                <div className="w-full sm:w-40 border-l sm:pl-4 flex flex-col items-center">
+                  <p className="text-[10px] text-gray-400 mb-2 font-bold uppercase tracking-wider">Current Active</p>
+                  <div className="w-32 h-32 bg-gray-50 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative group">
+                    {(qrStorageUrl || qrUrl || qrFile) ? (
+                      <>
+                        <img
+                          src={qrFile ? URL.createObjectURL(qrFile) : (qrStorageUrl || qrUrl)}
+                          alt="Preview"
+                          className="w-full h-full object-contain"
+                        />
+                        {qrStorageUrl && !qrFile && (
+                          <button
+                            onClick={clearQrFile}
+                            className="absolute inset-0 bg-red-600/80 text-white text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center uppercase"
+                          >
+                            Remove Upload
+                          </button>
+                        )}
+                      </>
+                    ) : (
+                      <span className="text-gray-300 text-[10px]">No QR Set</span>
+                    )}
+                  </div>
+                  <p className="text-[10px] text-gray-500 mt-2 text-center">
+                    {qrStorageUrl ? <span className="text-green-600 font-bold">USING UPLOADED</span> : qrUrl ? <span className="text-blue-600 font-bold">USING URL</span> : 'No QR set'}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="bg-white rounded-lg shadow p-4 mt-4">

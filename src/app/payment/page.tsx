@@ -23,26 +23,26 @@ function PaymentContent() {
       const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
       const isConfigured = supabaseUrl && !supabaseUrl.includes('your-project');
 
-      console.log('[QR] Fetching QR code...');
-      console.log('[ENV] Supabase URL configured:', !!supabaseUrl);
-      console.log('[ENV] Using placeholder:', !isConfigured);
-
+      console.log('[QR] Fetching QR code settings...');
       if (isConfigured) {
         try {
           const { supabase } = await import('@/lib/supabase');
-          const { data, error } = await supabase.from('settings').select('*').eq('id', 'qr_code').single();
+          const { data, error } = await supabase.from('settings').select('*');
           if (error) {
             console.error('[SUPABASE] Error fetching QR code:', error);
           } else if (data) {
-            console.log('[SUPABASE] QR Code found:', data.value);
-            setQrCode(data.value);
+            const fileQr = data.find(s => s.id === 'qr_code_file')?.value;
+            const urlQr = data.find(s => s.id === 'qr_code_url')?.value;
+            const legacyQr = data.find(s => s.id === 'qr_code')?.value;
+
+            const finalQr = fileQr || urlQr || legacyQr || '';
+            console.log('[SUPABASE] Final QR used:', finalQr);
+            setQrCode(finalQr);
             setQrError(false);
           }
         } catch (err) {
           console.error('[SUPABASE] Connection failed:', err);
         }
-      } else {
-        console.warn('[QR] Supabase not configured in environment variables.');
       }
       setFetchingQr(false);
     }
