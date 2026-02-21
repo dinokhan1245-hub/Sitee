@@ -266,30 +266,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   ]
 },
 {
-  "id": "toy_variety_1771664536187_7324",
-  "name": "TAOSTRY LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch_TSTY14 Smartwatch",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 2639,
-  "description": "TAOSTRY LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch_TSTY14 Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Type": "Kids Smartwatch",
-    "Display": "Digital Touch Screen",
-    "Features": "Games, Camera, Alarm",
-    "Strap Material": "Soft Silicone",
-    "Battery": "Rechargeable included"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/variety_img_1771664533489_12_849.jpeg",
-  "images": [
-    "/images/products/variety_img_1771664533489_12_849.jpeg",
-    "/images/products/variety_img_1771664533644_13_904.jpeg",
-    "/images/products/variety_img_1771664533747_14_163.jpeg",
-    "/images/products/variety_img_1771664533947_15_185.jpeg"
-  ]
-},
-{
   "id": "toy_variety_1771664536187_8230",
   "name": "Noise Explorer 2 for Kids 2-way Video & Voice Calling, Geofencing, Emergency Alerts Smartwatch",
   "price": 99,
@@ -311,30 +287,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/variety_img_1771664534287_17_480.jpeg",
     "/images/products/variety_img_1771664534458_18_251.jpeg",
     "/images/products/variety_img_1771664534563_19_537.jpeg"
-  ]
-},
-{
-  "id": "toy_variety_1771664536187_8587",
-  "name": "HLMT Teenagers LED Luxurious Fashion Silicone Digital Watch (Not smart watch) Smartwatch",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.5,
-  "review_count": 2727,
-  "description": "HLMT Teenagers LED Luxurious Fashion Silicone Digital Watch (Not smart watch) Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Type": "Kids Smartwatch",
-    "Display": "Digital Touch Screen",
-    "Features": "Games, Camera, Alarm",
-    "Strap Material": "Soft Silicone",
-    "Battery": "Rechargeable included"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/variety_img_1771664534675_20_848.jpeg",
-  "images": [
-    "/images/products/variety_img_1771664534675_20_848.jpeg",
-    "/images/products/variety_img_1771664534787_21_920.jpeg",
-    "/images/products/variety_img_1771664534890_22_288.jpeg",
-    "/images/products/variety_img_1771664534992_23_185.jpeg"
   ]
 },
 {
@@ -482,54 +434,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   ]
 },
 {
-  "id": "toy_1771663931128_22",
-  "name": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_452",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 1292,
-  "description": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_452 is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663918297_88.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663918297_88.jpeg",
-    "/images/products/real_toy_img_1771663918392_89.jpeg",
-    "/images/products/real_toy_img_1771663918516_90.jpeg",
-    "/images/products/real_toy_img_1771663918519_91.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_23",
-  "name": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_693",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.9,
-  "review_count": 2728,
-  "description": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_693 is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663918529_92.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663918529_92.jpeg",
-    "/images/products/real_toy_img_1771663918642_93.jpeg",
-    "/images/products/real_toy_img_1771663918747_94.jpeg",
-    "/images/products/real_toy_img_1771663918847_95.jpeg"
-  ]
-},
-{
   "id": "toy_1771663931128_24",
   "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
   "price": 99,
@@ -647,30 +551,6 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/real_toy_img_1771663922787_113.jpeg",
     "/images/products/real_toy_img_1771663922922_114.jpeg",
     "/images/products/real_toy_img_1771663923055_115.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_29",
-  "name": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_611",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 1377,
-  "description": "SNM97 Rechargeable High Speed Remote Control Famous Car For Kids Best Toys R_611 is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663923160_116.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663923160_116.jpeg",
-    "/images/products/real_toy_img_1771663923298_117.jpeg",
-    "/images/products/real_toy_img_1771663923426_118.jpeg",
-    "/images/products/real_toy_img_1771663923523_119.jpeg"
   ]
 },
 {
@@ -1199,6 +1079,116 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
     "/images/products/variety_new_1771665073555_29_120.jpeg",
     "/images/products/variety_new_1771665073662_30_621.jpeg",
     "/images/products/variety_new_1771665073778_31_637.jpeg"
+  ]
+},
+{
+  "id": "toy_ultra_distinct_1771665835393_7737",
+  "name": "HOT WHEELS HW-05",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.9,
+  "review_count": 2938,
+  "description": "HOT WHEELS HW-05 is an attractive, strictly distinctive product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Distinct Categorical Toy",
+    "Assurance": "100% Unique Product Match",
+    "Safety": "Non-Toxic Materials"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/distinct_replacement_1771665835226_0_758.jpeg",
+  "images": [
+    "/images/products/distinct_replacement_1771665835226_0_758.jpeg",
+    "/images/products/distinct_replacement_1771665835377_1_59.jpeg",
+    "/images/products/distinct_replacement_1771665835381_2_329.jpeg",
+    "/images/products/distinct_replacement_1771665835389_3_950.jpeg"
+  ]
+},
+{
+  "id": "toy_ultra_distinct_1771665841520_6597",
+  "name": "Nerf Elite 2.0 Commander RD-6 Toy Blaster,6- Rotating Drum,Incl. 12 Guns & Darts",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.6,
+  "review_count": 2959,
+  "description": "Nerf Elite 2.0 Commander RD-6 Toy Blaster,6- Rotating Drum,Incl. 12 Guns & Darts is an attractive, strictly distinctive product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Distinct Categorical Toy",
+    "Assurance": "100% Unique Product Match",
+    "Safety": "Non-Toxic Materials"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/distinct_replacement_1771665841379_0_875.jpeg",
+  "images": [
+    "/images/products/distinct_replacement_1771665841379_0_875.jpeg",
+    "/images/products/distinct_replacement_1771665841509_1_696.jpeg",
+    "/images/products/distinct_replacement_1771665841512_2_556.jpeg",
+    "/images/products/distinct_replacement_1771665841516_3_592.jpeg"
+  ]
+},
+{
+  "id": "toy_ultra_distinct_1771665847412_6496",
+  "name": "BARBIE Fashionistas Doll #205 with Blond Ponytail, Wearing Pink and Red Floral Dress",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.6,
+  "review_count": 1423,
+  "description": "BARBIE Fashionistas Doll #205 with Blond Ponytail, Wearing Pink and Red Floral Dress is an attractive, strictly distinctive product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Distinct Categorical Toy",
+    "Assurance": "100% Unique Product Match",
+    "Safety": "Non-Toxic Materials"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/distinct_replacement_1771665847273_0_65.jpeg",
+  "images": [
+    "/images/products/distinct_replacement_1771665847273_0_65.jpeg",
+    "/images/products/distinct_replacement_1771665847398_1_211.jpeg",
+    "/images/products/distinct_replacement_1771665847401_2_968.jpeg",
+    "/images/products/distinct_replacement_1771665847409_3_633.jpeg"
+  ]
+},
+{
+  "id": "toy_ultra_distinct_1771665853128_4586",
+  "name": "333MART 3x3 Cube for Kids, Speed Cube Puzzle for Kids & Adults",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.7,
+  "review_count": 2837,
+  "description": "333MART 3x3 Cube for Kids, Speed Cube Puzzle for Kids & Adults is an attractive, strictly distinctive product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Distinct Categorical Toy",
+    "Assurance": "100% Unique Product Match",
+    "Safety": "Non-Toxic Materials"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/distinct_replacement_1771665853096_0_379.jpeg",
+  "images": [
+    "/images/products/distinct_replacement_1771665853096_0_379.jpeg",
+    "/images/products/distinct_replacement_1771665853116_1_612.jpeg",
+    "/images/products/distinct_replacement_1771665853120_2_259.jpeg",
+    "/images/products/distinct_replacement_1771665853124_3_281.jpeg"
+  ]
+},
+{
+  "id": "toy_ultra_distinct_1771665859164_932",
+  "name": "mattel GAMES Uno Original Card game",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.8,
+  "review_count": 1598,
+  "description": "mattel GAMES Uno Original Card game is an attractive, strictly distinctive product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Distinct Categorical Toy",
+    "Assurance": "100% Unique Product Match",
+    "Safety": "Non-Toxic Materials"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/distinct_replacement_1771665859121_0_698.jpeg",
+  "images": [
+    "/images/products/distinct_replacement_1771665859121_0_698.jpeg",
+    "/images/products/distinct_replacement_1771665859146_1_442.jpeg",
+    "/images/products/distinct_replacement_1771665859150_2_665.jpeg",
+    "/images/products/distinct_replacement_1771665859160_3_806.jpeg"
   ]
 }
 ];
