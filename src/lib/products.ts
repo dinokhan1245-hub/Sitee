@@ -3,17 +3,17 @@ import type { Product } from './supabase';
 export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
   {
     "id": "1",
-    "name": "Premium Remote Control Toy 1",
-    "price": 99,
-    "original_price": 945,
+    "name": "ToyWorld Premium Remote Control Toy",
+    "price": 499,
+    "original_price": 1299,
     "rating": 4.8,
     "review_count": 1522,
     "description": "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
     "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
+      "/images/products/1.jpeg",
+      "/images/products/1.jpeg",
+      "/images/products/1.jpeg",
+      "/images/products/1.jpeg"
     ],
     "highlights": {
       "Quality": "Premium Grade",
@@ -22,21 +22,21 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
       "Delivery": "Next Day Delivery"
     },
     "badge": "Assured",
-    "image_url": "/images/products/unsplash_toy_4.jpeg"
+    "image_url": "/images/products/1.jpeg"
   },
   {
     "id": "2",
-    "name": "Premium Remote Control Toy 2",
-    "price": 99,
-    "original_price": 660,
+    "name": "KidZone Premium Remote Control Toy",
+    "price": 499,
+    "original_price": 1299,
     "rating": 4.7,
     "review_count": 2949,
     "description": "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
     "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
+      "/images/products/2.jpeg",
+      "/images/products/2.jpeg",
+      "/images/products/2.jpeg",
+      "/images/products/2.jpeg"
     ],
     "highlights": {
       "Quality": "Premium Grade",
@@ -45,21 +45,21 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
       "Delivery": "Next Day Delivery"
     },
     "badge": "Assured",
-    "image_url": "/images/products/unsplash_toy_4.jpeg"
+    "image_url": "/images/products/2.jpeg"
   },
   {
     "id": "3",
-    "name": "Premium Remote Control Toy 3",
-    "price": 99,
-    "original_price": 569,
+    "name": "PlayPlus Premium Remote Control Toy",
+    "price": 499,
+    "original_price": 1299,
     "rating": 4.8,
     "review_count": 1035,
     "description": "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
     "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
+      "/images/products/3.jpeg",
+      "/images/products/3.jpeg",
+      "/images/products/3.jpeg",
+      "/images/products/3.jpeg"
     ],
     "highlights": {
       "Quality": "Premium Grade",
@@ -68,21 +68,21 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
       "Delivery": "Next Day Delivery"
     },
     "badge": "Assured",
-    "image_url": "/images/products/unsplash_toy_4.jpeg"
+    "image_url": "/images/products/3.jpeg"
   },
   {
     "id": "4",
-    "name": "Premium Remote Control Toy 4",
-    "price": 99,
-    "original_price": 617,
+    "name": "FunLearn Premium Remote Control Toy",
+    "price": 499,
+    "original_price": 1299,
     "rating": 4.6,
     "review_count": 2299,
     "description": "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
     "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
+      "/images/products/4.jpeg",
+      "/images/products/4.jpeg",
+      "/images/products/4.jpeg",
+      "/images/products/4.jpeg"
     ],
     "highlights": {
       "Quality": "Premium Grade",
@@ -91,21 +91,21 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
       "Delivery": "Next Day Delivery"
     },
     "badge": "Assured",
-    "image_url": "/images/products/unsplash_toy_4.jpeg"
+    "image_url": "/images/products/4.jpeg"
   },
   {
     "id": "5",
-    "name": "Premium Remote Control Toy 5",
+    "name": "J K INTERNATIONAL Premium Remote Control Toy",
     "price": 99,
-    "original_price": 1344,
+    "original_price": 945,
     "rating": 4.9,
     "review_count": 797,
     "description": "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
     "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
+      "/images/products/5.jpeg",
+      "/images/products/5.jpeg",
+      "/images/products/5.jpeg",
+      "/images/products/5.jpeg"
     ],
     "highlights": {
       "Quality": "Premium Grade",
@@ -114,21 +114,21 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
       "Delivery": "Next Day Delivery"
     },
     "badge": "Assured",
-    "image_url": "/images/products/unsplash_toy_4.jpeg"
+    "image_url": "/images/products/5.jpeg"
   },
   {
     "id": "6",
-    "name": "Premium Remote Control Toy 6",
+    "name": "Easymart Premium Remote Control Toy",
     "price": 99,
-    "original_price": 613,
+    "original_price": 660,
     "rating": 4.9,
     "review_count": 2989,
     "description": "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
     "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
+      "/images/products/6.jpeg",
+      "/images/products/6.jpeg",
+      "/images/products/6.jpeg",
+      "/images/products/6.jpeg"
     ],
     "highlights": {
       "Quality": "Premium Grade",
@@ -137,21 +137,21 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
       "Delivery": "Next Day Delivery"
     },
     "badge": "Assured",
-    "image_url": "/images/products/unsplash_toy_4.jpeg"
+    "image_url": "/images/products/6.jpeg"
   },
   {
     "id": "7",
-    "name": "Premium Remote Control Toy 7",
+    "name": "Flipkart Premium Remote Control Toy",
     "price": 99,
-    "original_price": 620,
+    "original_price": 569,
     "rating": 4.7,
     "review_count": 1955,
     "description": "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
     "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
+      "/images/products/7.jpeg",
+      "/images/products/7.jpeg",
+      "/images/products/7.jpeg",
+      "/images/products/7.jpeg"
     ],
     "highlights": {
       "Quality": "Premium Grade",
@@ -160,21 +160,21 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
       "Delivery": "Next Day Delivery"
     },
     "badge": "Assured",
-    "image_url": "/images/products/unsplash_toy_4.jpeg"
+    "image_url": "/images/products/7.jpeg"
   },
   {
     "id": "8",
-    "name": "Premium Remote Control Toy 8",
+    "name": "BabyMart Premium Remote Control Toy",
     "price": 99,
-    "original_price": 854,
+    "original_price": 617,
     "rating": 4.7,
     "review_count": 737,
     "description": "High speed premium remote control toy with durable build quality. Perfect for all terrains and racing action.",
     "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
+      "/images/products/8.jpeg",
+      "/images/products/8.jpeg",
+      "/images/products/8.jpeg",
+      "/images/products/8.jpeg"
     ],
     "highlights": {
       "Quality": "Premium Grade",
@@ -183,337 +183,5 @@ export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
       "Delivery": "Next Day Delivery"
     },
     "badge": "Assured",
-    "image_url": "/images/products/unsplash_toy_4.jpeg"
-  }
-,
-  {
-  "id": "new_toy_1771655179090_0",
-  "name": "Premium Remote Control Toy 1",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.9,
-  "review_count": 2720,
-  "description": "Premium Remote Control Toy 1 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_2.jpeg"
-},
-  {
-  "id": "new_toy_1771655182494_1",
-  "name": "Premium Remote Control Toy 2",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.2,
-  "review_count": 2212,
-  "description": "Premium Remote Control Toy 2 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_4.jpeg"
-},
-  {
-  "id": "new_toy_1771655185719_2",
-  "name": "Premium Remote Control Toy 3",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.6,
-  "review_count": 3027,
-  "description": "Premium Remote Control Toy 3 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_3.jpeg",
-      "/images/products/unsplash_toy_3.jpeg",
-      "/images/products/unsplash_toy_3.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_2.jpeg"
-},
-  {
-  "id": "new_toy_1771655188750_3",
-  "name": "Premium Remote Control Toy 4",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.3,
-  "review_count": 2811,
-  "description": "Premium Remote Control Toy 4 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_1.jpeg"
-},
-  {
-  "id": "new_toy_1771655191681_4",
-  "name": "Premium Remote Control Toy 5",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4,
-  "review_count": 856,
-  "description": "Premium Remote Control Toy 5 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_4.jpeg"
-},
-  {
-  "id": "new_toy_1771655194660_5",
-  "name": "Premium Remote Control Toy 6",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.3,
-  "review_count": 2256,
-  "description": "Premium Remote Control Toy 6 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_3.jpeg"
-},
-  {
-  "id": "new_toy_1771655197748_6",
-  "name": "Premium Remote Control Toy 7",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 3040,
-  "description": "Premium Remote Control Toy 7 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_3.jpeg"
-},
-  {
-  "id": "new_toy_1771655200724_7",
-  "name": "Premium Remote Control Toy 8",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 1113,
-  "description": "Premium Remote Control Toy 8 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_4.jpeg"
-},
-  {
-  "id": "new_toy_1771655203582_8",
-  "name": "Premium Remote Control Toy 9",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.5,
-  "review_count": 1189,
-  "description": "Premium Remote Control Toy 9 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_2.jpeg",
-      "/images/products/unsplash_toy_2.jpeg",
-      "/images/products/unsplash_toy_2.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_2.jpeg"
-},
-  {
-  "id": "new_toy_1771655206428_9",
-  "name": "Premium Remote Control Toy 10",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 1735,
-  "description": "Premium Remote Control Toy 10 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_3.jpeg",
-      "/images/products/unsplash_toy_3.jpeg",
-      "/images/products/unsplash_toy_3.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_3.jpeg"
-},
-  {
-  "id": "new_toy_1771655209512_10",
-  "name": "Premium Remote Control Toy 11",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.1,
-  "review_count": 2208,
-  "description": "Premium Remote Control Toy 11 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_3.jpeg",
-      "/images/products/unsplash_toy_3.jpeg",
-      "/images/products/unsplash_toy_3.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_4.jpeg"
-},
-  {
-  "id": "new_toy_1771655212549_11",
-  "name": "Premium Remote Control Toy 12",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 3066,
-  "description": "Premium Remote Control Toy 12 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg",
-      "/images/products/unsplash_toy_4.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_4.jpeg"
-},
-  {
-  "id": "new_toy_1771655215491_12",
-  "name": "Premium Remote Control Toy 13",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.1,
-  "review_count": 1887,
-  "description": "Premium Remote Control Toy 13 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_2.jpeg",
-      "/images/products/unsplash_toy_2.jpeg",
-      "/images/products/unsplash_toy_2.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_1.jpeg"
-},
-  {
-  "id": "new_toy_1771655218359_13",
-  "name": "Premium Remote Control Toy 14",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.2,
-  "review_count": 1384,
-  "description": "Premium Remote Control Toy 14 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_3.jpeg",
-      "/images/products/unsplash_toy_3.jpeg",
-      "/images/products/unsplash_toy_3.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_4.jpeg"
-},
-  {
-  "id": "new_toy_1771655221179_14",
-  "name": "Premium Remote Control Toy 15",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.3,
-  "review_count": 1698,
-  "description": "Premium Remote Control Toy 15 is an attractive, durable toy designed for hours of creative play. Features bright colors and sturdy construction.",
-  "images": [
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg",
-      "/images/products/unsplash_toy_1.jpeg"
-    ],
-  "highlights": {
-    "Quality": "Premium Grade ABS Material",
-    "Battery": "Rechargeable 500mAh Included",
-    "Control Range": "Up to 50 meters",
-    "Safety": "Non-Toxic, BPA Free"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/unsplash_toy_4.jpeg"
-}
-];
+    "image_url": "/images/products/8.jpeg"
+  },\n\n];\n
