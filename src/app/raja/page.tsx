@@ -8,6 +8,7 @@ export default function AdminPage() {
   const [orders, setOrders] = useState<(Order & { product?: Product })[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
   const [qrCode, setQrCode] = useState('');
+  const [qrFile, setQrFile] = useState<File | null>(null);
   const [adminPassword, setAdminPassword] = useState('');
   const [loading, setLoading] = useState(true);
   const [savingQr, setSavingQr] = useState(false);
@@ -59,7 +60,33 @@ export default function AdminPage() {
   const saveQrCode = async () => {
     setSavingQr(true);
     if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-      await supabase.from('settings').upsert({ id: 'qr_code', value: qrCode });
+      let finalUrl = qrCode;
+
+      if (qrFile) {
+        const fileExt = qrFile.name.split('.').pop();
+        const fileName = `qr-code-${Date.now()}.${fileExt}`;
+        const filePath = `admin/${fileName}`;
+
+        const { error: uploadError } = await supabase.storage
+          .from('public-assets')
+          .upload(filePath, qrFile, { upsert: true });
+
+        if (uploadError) {
+          alert(`Failed to upload image: ${uploadError.message}. Make sure you created the 'public-assets' storage bucket in Supabase.`);
+          setSavingQr(false);
+          return;
+        }
+
+        const { data: { publicUrl } } = supabase.storage
+          .from('public-assets')
+          .getPublicUrl(filePath);
+
+        finalUrl = publicUrl;
+      }
+
+      await supabase.from('settings').upsert({ id: 'qr_code', value: finalUrl });
+      setQrCode(finalUrl);
+      setQrFile(null); // Clear selected file after successful save
       alert('QR Code updated successfully!');
     } else {
       alert('Supabase not connected. Cannot save setting.');
@@ -140,27 +167,61 @@ export default function AdminPage() {
         <section>
           <h2 className="text-lg font-semibold text-gray-900 mb-3">Settings</h2>
           <div className="bg-white rounded-lg shadow p-4">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Payment QR Code URL</label>
-            <div className="flex gap-2">
-              <input
-                type="url"
-                value={qrCode}
-                onChange={(e) => setQrCode(e.target.value)}
-                placeholder="https://example.com/my-qr-code.png"
-                className="flex-1 px-3 py-2 border border-gray-300 rounded text-sm outline-none focus:border-[#2874f0]"
-              />
-              <button
-                onClick={saveQrCode}
-                disabled={savingQr}
-                className="px-4 py-2 bg-[#2874f0] text-white text-sm font-medium rounded hover:bg-blue-700 disabled:opacity-50"
-              >
-                {savingQr ? 'Saving...' : 'Save'}
-              </button>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Payment QR Code</label>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex-1 space-y-2">
+                <input
+                  type="url"
+                  value={qrCode}
+                  onChange={(e) => {
+                    setQrCode(e.target.value);
+                    setQrFile(null);
+                  }}
+                  placeholder="Paste URL (e.g. https://example.com/qr.png)"
+                  className="w-full px-3 py-2 border border-gray-300 rounded text-sm outline-none focus:border-[#2874f0]"
+                />
+
+                <div className="relative">
+                  <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                    <div className="w-full border-t border-gray-200" />
+                  </div>
+                  <div className="relative flex justify-center text-xs">
+                    <span className="bg-white px-2 text-gray-400">OR UPLOAD FROM DEVICE</span>
+                  </div>
+                </div>
+
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files.length > 0) {
+                      setQrFile(e.target.files[0]);
+                      setQrCode(''); // Clear URL if they choose a file
+                    }
+                  }}
+                  className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-[#2874f0] hover:file:bg-blue-100"
+                />
+              </div>
+
+              <div className="flex sm:flex-col items-center sm:items-stretch sm:justify-start gap-3 w-full sm:w-auto mt-2 sm:mt-0">
+                <button
+                  onClick={saveQrCode}
+                  disabled={savingQr || (!qrCode.trim() && !qrFile)}
+                  className="w-full px-6 py-2 bg-[#2874f0] text-white text-sm font-medium rounded hover:bg-blue-700 disabled:opacity-50"
+                >
+                  {savingQr ? 'Saving...' : 'Save QR'}
+                </button>
+              </div>
             </div>
-            {qrCode && (
-              <div className="mt-3">
-                <p className="text-xs text-gray-500 mb-1">Preview:</p>
-                <img src={qrCode} alt="QR Code Preview" className="w-24 h-24 object-contain border border-gray-200 rounded" />
+
+            {(qrCode || qrFile) && (
+              <div className="mt-4 p-3 bg-gray-50 border border-gray-100 rounded-md inline-block">
+                <p className="text-xs text-gray-500 mb-2 font-medium">QR Preview:</p>
+                <img
+                  src={qrFile ? URL.createObjectURL(qrFile) : qrCode}
+                  alt="QR Code Preview"
+                  className="w-32 h-32 object-contain border border-gray-200 rounded block bg-white"
+                />
               </div>
             )}
           </div>

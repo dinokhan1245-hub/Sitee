@@ -84,6 +84,27 @@ CREATE POLICY "Allow public access to settings"
 
 -- Insert the default admin password into the settings table
 INSERT INTO settings (id, value) VALUES ('admin_password', 'admin123') ON CONFLICT (id) DO NOTHING;
+
+-- 4. Set up Supabase Storage for Admin QR Code Uploads
+-- Insert a new public bucket named 'public-assets' if it doesn't already exist
+INSERT INTO storage.buckets (id, name, public) 
+VALUES ('public-assets', 'public-assets', true)
+ON CONFLICT (id) DO NOTHING;
+
+-- Allow public access to read files from 'public-assets'
+CREATE POLICY "Public Access" 
+ON storage.objects FOR SELECT 
+USING (bucket_id = 'public-assets');
+
+-- Allow public access to upload files to 'public-assets' (In production, restrict to authenticated)
+CREATE POLICY "Allow Public Uploads" 
+ON storage.objects FOR INSERT 
+WITH CHECK (bucket_id = 'public-assets');
+
+-- Allow public access to update files in 'public-assets'
+CREATE POLICY "Allow Public Updates" 
+ON storage.objects FOR UPDATE 
+USING (bucket_id = 'public-assets');
 ```
 
 ## 2. Vercel Environment Variables
