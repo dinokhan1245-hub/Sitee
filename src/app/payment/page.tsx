@@ -13,6 +13,7 @@ function PaymentContent() {
   const [secondsLeft, setSecondsLeft] = useState(PAYMENT_DURATION_SEC);
   const [qrCode, setQrCode] = useState('');
   const [fetchingQr, setFetchingQr] = useState(true);
+  const [qrError, setQrError] = useState(false);
   const [utr, setUtr] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
@@ -29,6 +30,7 @@ function PaymentContent() {
           } else if (data) {
             console.log('[SUPABASE] QR Code found:', data.value);
             setQrCode(data.value);
+            setQrError(false); // Reset error if we have a value
           }
         } catch (err) {
           console.error('[SUPABASE] Connection failed:', err);
@@ -118,12 +120,20 @@ function PaymentContent() {
                 <div className="w-8 h-8 border-2 border-[#2874f0] border-t-transparent rounded-full animate-spin" />
                 <p className="text-[10px] text-gray-400">Loading QR...</p>
               </div>
-            ) : qrCode ? (
-              <img src={qrCode} alt="Payment QR Code" className="w-full h-full object-contain" />
+            ) : qrCode && !qrError ? (
+              <img
+                src={qrCode}
+                alt="Payment QR Code"
+                className="w-full h-full object-contain"
+                onError={() => {
+                  console.error('[QR] Failed to load image URL:', qrCode);
+                  setQrError(true);
+                }}
+              />
             ) : (
               <div className="p-4 text-center">
-                <p className="font-medium text-gray-400">QR Code Not Set</p>
-                <p className="text-[10px] mt-1 text-gray-400">Please upload your payment QR in the Admin Panel (/raja)</p>
+                <p className="font-medium text-gray-400">{qrError ? 'Invalid QR Image' : 'QR Code Not Set'}</p>
+                <p className="text-[10px] mt-1 text-gray-400">Please upload a valid payment QR in the Admin Panel (/raja)</p>
               </div>
             )}
           </div>
