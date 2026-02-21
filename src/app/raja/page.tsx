@@ -18,7 +18,15 @@ export default function AdminPage() {
   const [dbPassword, setDbPassword] = useState(process.env.NEXT_PUBLIC_ADMIN_SECRET || 'admin123');
 
   useEffect(() => {
-    if (!unlocked) return;
+    async function fetchPreLoginData() {
+      if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
+        const passRes = await supabase.from('settings').select('*').eq('id', 'admin_password').single();
+        if (passRes.data) {
+          setDbPassword(passRes.data.value);
+        }
+      }
+    }
+
     async function fetchData() {
       if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
         const [ordersRes, productsRes, qrRes, passRes] = await Promise.all([
@@ -45,16 +53,12 @@ export default function AdminPage() {
       }
       setLoading(false);
     }
-    fetchData();
-    async function fetchPreLoginData() {
-      if (!unlocked && process.env.NEXT_PUBLIC_SUPABASE_URL) {
-        const passRes = await supabase.from('settings').select('*').eq('id', 'admin_password').single();
-        if (passRes.data) {
-          setDbPassword(passRes.data.value);
-        }
-      }
+
+    if (!unlocked) {
+      fetchPreLoginData();
+    } else {
+      fetchData();
     }
-    fetchPreLoginData();
   }, [unlocked]);
 
   const saveQrCode = async () => {
