@@ -148,19 +148,35 @@ async function main() {
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 1000 });
 
-    console.log('Scraping 32 distinct LEGO images...');
-    const legoImages = await scrapeCategory(page, 'lego building blocks toys for kids', 32);
-    console.log(`Grabbed ${legoImages.length} Lego images.`);
+    console.log('Scraping 16 distinct RC Trucks...');
+    const truckImages = await scrapeCategory(page, 'rc construction toy truck excavator', 16);
+    console.log(`Grabbed ${truckImages.length} Truck images.`);
 
-    console.log('Scraping 32 distinct Smartwatch images...');
-    const watchImages = await scrapeCategory(page, 'kids smart watch digital', 32);
-    console.log(`Grabbed ${watchImages.length} Watch images.`);
+    console.log('Scraping 16 distinct RC Robots...');
+    const robotImages = await scrapeCategory(page, 'remote control kids robot toy', 16);
+    console.log(`Grabbed ${robotImages.length} Robot images.`);
+
+    console.log('Scraping 16 distinct RC Drones...');
+    const droneImages = await scrapeCategory(page, 'kids flying rc drone toy camera', 16);
+    console.log(`Grabbed ${droneImages.length} Drone images.`);
 
     await browser.close();
 
     const newLegoProducts = generateProducts(legoImages, 8, 'lego');
     const newWatchProducts = generateProducts(watchImages, 8, 'watch');
-    const newVarietyProducts = [...newLegoProducts, ...newWatchProducts];
+
+    // 12 New Distinct Replacements for generic RC Cars
+    const newTruckProducts = generateProducts(truckImages, 4, 'truck');
+    const newRobotProducts = generateProducts(robotImages, 4, 'robot');
+    const newDroneProducts = generateProducts(droneImages, 4, 'drone');
+
+    const newVarietyProducts = [
+        ...newLegoProducts,
+        ...newWatchProducts,
+        ...newTruckProducts,
+        ...newRobotProducts,
+        ...newDroneProducts
+    ];
 
     if (newVarietyProducts.length === 0) {
         console.log('Failed to generate any new products.');
@@ -177,7 +193,7 @@ async function main() {
         let arr = eval('[' + match[1] + ']');
         console.log(`Original catalog size: ${arr.length}`);
 
-        // Replace the first 16 items
+        // We replace the first 28 slots completely (16 original varieties + 12 new distinct vehicles)
         for (let i = 0; i < newVarietyProducts.length; i++) {
             if (i < arr.length) {
                 arr[i] = newVarietyProducts[i];
@@ -190,12 +206,11 @@ async function main() {
         const newContent = fallbackProductsBase + arr.map(t => JSON.stringify(t, null, 2)).join(',\\n') + '\\n];\\n';
 
         fs.writeFileSync(productsFile, newContent);
-        console.log('Saved updated mixed-variety products perfectly to src/lib/products.ts!');
+        console.log('Saved hyper-diverse mixed-variety products seamlessly to src/lib/products.ts!');
 
-        // Execute generate_sql.js to rebuild Supabase seeder
         const { execSync } = require('child_process');
-        execSync('node generate_sql.js', { stdio: 'inherit' });
-        console.log('SQL generated automatically.');
+        execSync('node purge_duplicates.js', { stdio: 'inherit' });
+        console.log('Run secondary deduplication logic instantly.');
     } else {
         console.log('Could not parse products.ts');
     }
