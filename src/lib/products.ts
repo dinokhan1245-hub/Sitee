@@ -2,387 +2,387 @@ import type { Product } from './supabase';
 
 export const FALLBACK_PRODUCTS: Omit<Product, 'created_at'>[] = [
 {
-  "id": "toy_1771663931127_0",
-  "name": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels)",
+  "id": "toy_variety_1771664536187_665",
+  "name": "LEGO Technic Backhoe Loader Construction Toy Vehicle Set 42197 (104 Blocks)",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.8,
+  "review_count": 2201,
+  "description": "LEGO Technic Backhoe Loader Construction Toy Vehicle Set 42197 (104 Blocks) is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Building Blocks",
+    "Age Group": "5+ Years",
+    "Skills": "Creativity & Hand-Eye Coordination",
+    "Material": "Premium Non-Toxic Plastic",
+    "Pieces": "Multiple Interlocking Blocks"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664514942_0_211.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664514942_0_211.jpeg",
+    "/images/products/variety_img_1771664515110_1_819.jpeg",
+    "/images/products/variety_img_1771664515311_2_975.jpeg",
+    "/images/products/variety_img_1771664515431_3_767.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_1813",
+  "name": "LEGO Classic Creative Happy Box Colorful Building Bricks Toy 11042 (680 Blocks)",
   "price": 99,
   "original_price": 1299,
   "rating": 4.5,
-  "review_count": 1166,
-  "description": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels) is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "review_count": 2840,
+  "description": "LEGO Classic Creative Happy Box Colorful Building Bricks Toy 11042 (680 Blocks) is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
   "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
+    "Type": "Building Blocks",
+    "Age Group": "5+ Years",
+    "Skills": "Creativity & Hand-Eye Coordination",
+    "Material": "Premium Non-Toxic Plastic",
+    "Pieces": "Multiple Interlocking Blocks"
   },
   "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663912035_0.jpeg",
+  "image_url": "/images/products/variety_img_1771664515563_4_531.jpeg",
   "images": [
-    "/images/products/real_toy_img_1771663912035_0.jpeg",
-    "/images/products/real_toy_img_1771663912116_1.jpeg",
-    "/images/products/real_toy_img_1771663912149_2.jpeg",
-    "/images/products/real_toy_img_1771663912166_3.jpeg"
+    "/images/products/variety_img_1771664515563_4_531.jpeg",
+    "/images/products/variety_img_1771664515716_5_933.jpeg",
+    "/images/products/variety_img_1771664515816_6_264.jpeg",
+    "/images/products/variety_img_1771664516027_7_684.jpeg"
   ]
 },
 {
-  "id": "toy_1771663931128_1",
-  "name": "ZUNBELLA 4WD Double Sided RC Smoke Stunt Drift Toy Car 360° Rotation Drift Toy For Kids",
+  "id": "toy_variety_1771664536187_5086",
+  "name": "LEGO Classic Green Baseplate 11023 Building Kit for Kids (1 Blocks)",
   "price": 99,
   "original_price": 1299,
   "rating": 4.9,
-  "review_count": 1629,
-  "description": "ZUNBELLA 4WD Double Sided RC Smoke Stunt Drift Toy Car 360° Rotation Drift Toy For Kids is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "review_count": 2459,
+  "description": "LEGO Classic Green Baseplate 11023 Building Kit for Kids (1 Blocks) is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
   "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
+    "Type": "Building Blocks",
+    "Age Group": "5+ Years",
+    "Skills": "Creativity & Hand-Eye Coordination",
+    "Material": "Premium Non-Toxic Plastic",
+    "Pieces": "Multiple Interlocking Blocks"
   },
   "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663912189_4.jpeg",
+  "image_url": "/images/products/variety_img_1771664516186_8_340.jpeg",
   "images": [
-    "/images/products/real_toy_img_1771663912189_4.jpeg",
-    "/images/products/real_toy_img_1771663912217_5.jpeg",
-    "/images/products/real_toy_img_1771663912255_6.jpeg",
-    "/images/products/real_toy_img_1771663912288_7.jpeg"
+    "/images/products/variety_img_1771664516186_8_340.jpeg",
+    "/images/products/variety_img_1771664516310_9_443.jpeg",
+    "/images/products/variety_img_1771664516461_10_855.jpeg",
+    "/images/products/variety_img_1771664516610_11_917.jpeg"
   ]
 },
 {
-  "id": "toy_1771663931128_2",
-  "name": "Xcillince Toys RC Car Chargable| Fun RC Toy and Gift for Kids (Multicolour)",
+  "id": "toy_variety_1771664536187_8229",
+  "name": "LEGO Disney Princess Ariels Music Stage 43235 ( 60 Blocks)",
   "price": 99,
   "original_price": 1299,
-  "rating": 4.9,
-  "review_count": 2685,
-  "description": "Xcillince Toys RC Car Chargable| Fun RC Toy and Gift for Kids (Multicolour) is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "rating": 4.7,
+  "review_count": 2064,
+  "description": "LEGO Disney Princess Ariels Music Stage 43235 ( 60 Blocks) is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
   "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
+    "Type": "Building Blocks",
+    "Age Group": "5+ Years",
+    "Skills": "Creativity & Hand-Eye Coordination",
+    "Material": "Premium Non-Toxic Plastic",
+    "Pieces": "Multiple Interlocking Blocks"
   },
   "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663912313_8.jpeg",
+  "image_url": "/images/products/variety_img_1771664516742_12_878.jpeg",
   "images": [
-    "/images/products/real_toy_img_1771663912313_8.jpeg",
-    "/images/products/real_toy_img_1771663912332_9.jpeg",
-    "/images/products/real_toy_img_1771663912352_10.jpeg",
-    "/images/products/real_toy_img_1771663912381_11.jpeg"
+    "/images/products/variety_img_1771664516742_12_878.jpeg",
+    "/images/products/variety_img_1771664516851_13_162.jpeg",
+    "/images/products/variety_img_1771664516998_14_793.jpeg",
+    "/images/products/variety_img_1771664517138_15_672.jpeg"
   ]
 },
 {
-  "id": "toy_1771663931128_3",
-  "name": "Buddynjoy 3D lighting kids high speed rechargeable remote control Car for 3+ Years",
+  "id": "toy_variety_1771664536187_3020",
+  "name": "LEGO Creator 3-in-1 Red Dragon Animal Toy Set 31145 ( 149 Pieces)",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.7,
+  "review_count": 1758,
+  "description": "LEGO Creator 3-in-1 Red Dragon Animal Toy Set 31145 ( 149 Pieces) is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Building Blocks",
+    "Age Group": "5+ Years",
+    "Skills": "Creativity & Hand-Eye Coordination",
+    "Material": "Premium Non-Toxic Plastic",
+    "Pieces": "Multiple Interlocking Blocks"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664517224_16_153.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664517224_16_153.jpeg",
+    "/images/products/variety_img_1771664517297_17_655.jpeg",
+    "/images/products/variety_img_1771664517430_18_205.jpeg",
+    "/images/products/variety_img_1771664517562_19_386.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_8458",
+  "name": "RVM Toys 100 Pcs Big Size Building Blocks for Small Kids Toddlers with Bags and Wheels Bigger Than Lego Blocks Gift Toy",
   "price": 99,
   "original_price": 1299,
   "rating": 4.6,
-  "review_count": 2021,
-  "description": "Buddynjoy 3D lighting kids high speed rechargeable remote control Car for 3+ Years is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "review_count": 1200,
+  "description": "RVM Toys 100 Pcs Big Size Building Blocks for Small Kids Toddlers with Bags and Wheels Bigger Than Lego Blocks Gift Toy is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
   "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
+    "Type": "Building Blocks",
+    "Age Group": "5+ Years",
+    "Skills": "Creativity & Hand-Eye Coordination",
+    "Material": "Premium Non-Toxic Plastic",
+    "Pieces": "Multiple Interlocking Blocks"
   },
   "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663912410_12.jpeg",
+  "image_url": "/images/products/variety_img_1771664517673_20_53.jpeg",
   "images": [
-    "/images/products/real_toy_img_1771663912410_12.jpeg",
-    "/images/products/real_toy_img_1771663912447_13.jpeg",
-    "/images/products/real_toy_img_1771663912524_14.jpeg",
-    "/images/products/real_toy_img_1771663912670_15.jpeg"
+    "/images/products/variety_img_1771664517673_20_53.jpeg",
+    "/images/products/variety_img_1771664517789_21_813.jpeg",
+    "/images/products/variety_img_1771664517951_22_730.jpeg",
+    "/images/products/variety_img_1771664517997_23_50.jpeg"
   ]
 },
 {
-  "id": "toy_1771663931128_4",
-  "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.5,
-  "review_count": 1824,
-  "description": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663912694_16.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663912694_16.jpeg",
-    "/images/products/real_toy_img_1771663912728_17.jpeg",
-    "/images/products/real_toy_img_1771663912766_18.jpeg",
-    "/images/products/real_toy_img_1771663912789_19.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_5",
-  "name": "Toy Tree Jesavi Enterprise Sensor Magic Induction RC Car Remote Control Toy with Lights & Music",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 1407,
-  "description": "Toy Tree Jesavi Enterprise Sensor Magic Induction RC Car Remote Control Toy with Lights & Music is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663912814_20.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663912814_20.jpeg",
-    "/images/products/real_toy_img_1771663912833_21.jpeg",
-    "/images/products/real_toy_img_1771663912848_22.jpeg",
-    "/images/products/real_toy_img_1771663912865_23.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_6",
-  "name": "APJ enterprise Mini Stunt Car Toy for Kids Multicolor",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.6,
-  "review_count": 2230,
-  "description": "APJ enterprise Mini Stunt Car Toy for Kids Multicolor is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663912908_24.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663912908_24.jpeg",
-    "/images/products/real_toy_img_1771663912931_25.jpeg",
-    "/images/products/real_toy_img_1771663912949_26.jpeg",
-    "/images/products/real_toy_img_1771663912979_27.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_7",
-  "name": "frendo High Speed 1:24 Scale Rechargeable Remote Car for Kids",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 1014,
-  "description": "frendo High Speed 1:24 Scale Rechargeable Remote Car for Kids is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663912997_28.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663912997_28.jpeg",
-    "/images/products/real_toy_img_1771663913016_29.jpeg",
-    "/images/products/real_toy_img_1771663913045_30.jpeg",
-    "/images/products/real_toy_img_1771663913093_31.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_8",
-  "name": "Xcillince Toys xt_Remote Control Car For Kids High Speed Racing Car With Stylish Looks",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 2505,
-  "description": "Xcillince Toys xt_Remote Control Car For Kids High Speed Racing Car With Stylish Looks is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663913115_32.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663913115_32.jpeg",
-    "/images/products/real_toy_img_1771663913142_33.jpeg",
-    "/images/products/real_toy_img_1771663913161_34.jpeg",
-    "/images/products/real_toy_img_1771663913182_35.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_9",
-  "name": "ZUNBELLA 3D Super Transparent Car 360 Mechanical Rotation with Sound &Light Toys for Kids",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 1592,
-  "description": "ZUNBELLA 3D Super Transparent Car 360 Mechanical Rotation with Sound &Light Toys for Kids is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663913211_36.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663913211_36.jpeg",
-    "/images/products/real_toy_img_1771663913233_37.jpeg",
-    "/images/products/real_toy_img_1771663913252_38.jpeg",
-    "/images/products/real_toy_img_1771663913270_39.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_10",
-  "name": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels)",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 2646,
-  "description": "joymax RC Rock Crawler Car for Kids – 4WD Remote Control Off-Road Rock Car (Big Wheels) is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663913372_40.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663913372_40.jpeg",
-    "/images/products/real_toy_img_1771663913379_41.jpeg",
-    "/images/products/real_toy_img_1771663913383_42.jpeg",
-    "/images/products/real_toy_img_1771663913499_43.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_11",
-  "name": "twist n turn 3D LIGHT CAR -BLUE",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 1747,
-  "description": "twist n turn 3D LIGHT CAR -BLUE is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663913626_44.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663913626_44.jpeg",
-    "/images/products/real_toy_img_1771663913641_45.jpeg",
-    "/images/products/real_toy_img_1771663913660_46.jpeg",
-    "/images/products/real_toy_img_1771663913663_47.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_12",
-  "name": "Chaowbow Drift Stunt Remote Control Car Toy for Kids with Lights & Music|Rechargeable Car",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.5,
-  "review_count": 1879,
-  "description": "Chaowbow Drift Stunt Remote Control Car Toy for Kids with Lights & Music|Rechargeable Car is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663913666_48.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663913666_48.jpeg",
-    "/images/products/real_toy_img_1771663913685_49.jpeg",
-    "/images/products/real_toy_img_1771663913688_50.jpeg",
-    "/images/products/real_toy_img_1771663913691_51.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_13",
-  "name": "frendo High Speed 1:24 Scale Rechargeable Remote Car for Kids",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.7,
-  "review_count": 1462,
-  "description": "frendo High Speed 1:24 Scale Rechargeable Remote Car for Kids is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663913694_52.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663913694_52.jpeg",
-    "/images/products/real_toy_img_1771663913712_53.jpeg",
-    "/images/products/real_toy_img_1771663913730_54.jpeg",
-    "/images/products/real_toy_img_1771663913828_55.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_14",
-  "name": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights",
-  "price": 99,
-  "original_price": 1299,
-  "rating": 4.8,
-  "review_count": 1129,
-  "description": "J K INTERNATIONAL Remote Control Car for Kids with Mist Spray Action Flashing Lights is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
-  "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
-  },
-  "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663913931_56.jpeg",
-  "images": [
-    "/images/products/real_toy_img_1771663913931_56.jpeg",
-    "/images/products/real_toy_img_1771663913936_57.jpeg",
-    "/images/products/real_toy_img_1771663913939_58.jpeg",
-    "/images/products/real_toy_img_1771663914050_59.jpeg"
-  ]
-},
-{
-  "id": "toy_1771663931128_15",
-  "name": "Prikuna Multicolor Remote Control Car for Kids, 2-Way, Battery Operated",
+  "id": "toy_variety_1771664536187_2239",
+  "name": "LEGO 11043",
   "price": 99,
   "original_price": 1299,
   "rating": 4.9,
-  "review_count": 2447,
-  "description": "Prikuna Multicolor Remote Control Car for Kids, 2-Way, Battery Operated is an attractive, durable toy designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "review_count": 1730,
+  "description": "LEGO 11043 is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
   "highlights": {
-    "Quality": "Premium Grade",
-    "Safety": "Non-Toxic Materials",
-    "Battery": "Rechargeable included",
-    "Durability": "Shatterproof Body",
-    "Wheels": "Anti-skid rubber tires"
+    "Type": "Building Blocks",
+    "Age Group": "5+ Years",
+    "Skills": "Creativity & Hand-Eye Coordination",
+    "Material": "Premium Non-Toxic Plastic",
+    "Pieces": "Multiple Interlocking Blocks"
   },
   "badge": "Assured",
-  "image_url": "/images/products/real_toy_img_1771663914162_60.jpeg",
+  "image_url": "/images/products/variety_img_1771664518124_24_186.jpeg",
   "images": [
-    "/images/products/real_toy_img_1771663914162_60.jpeg",
-    "/images/products/real_toy_img_1771663914258_61.jpeg",
-    "/images/products/real_toy_img_1771663914350_62.jpeg",
-    "/images/products/real_toy_img_1771663914457_63.jpeg"
+    "/images/products/variety_img_1771664518124_24_186.jpeg",
+    "/images/products/variety_img_1771664518316_25_610.jpeg",
+    "/images/products/variety_img_1771664518492_26_180.jpeg",
+    "/images/products/variety_img_1771664518575_27_105.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_5269",
+  "name": "kluzie BEST BUY 100 PCS Building Blocks to expand and imagine Lego blocks for children's Learning & Educational toys boys and girls exercise children's intelligence Toy Set",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.6,
+  "review_count": 2277,
+  "description": "kluzie BEST BUY 100 PCS Building Blocks to expand and imagine Lego blocks for children's Learning & Educational toys boys and girls exercise children's intelligence Toy Set is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Building Blocks",
+    "Age Group": "5+ Years",
+    "Skills": "Creativity & Hand-Eye Coordination",
+    "Material": "Premium Non-Toxic Plastic",
+    "Pieces": "Multiple Interlocking Blocks"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664518724_28_978.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664518724_28_978.jpeg",
+    "/images/products/variety_img_1771664518756_29_153.jpeg",
+    "/images/products/variety_img_1771664518951_30_302.jpeg",
+    "/images/products/variety_img_1771664519129_31_694.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_3482",
+  "name": "imoo Z7 Smartwatch",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.7,
+  "review_count": 1585,
+  "description": "imoo Z7 Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Kids Smartwatch",
+    "Display": "Digital Touch Screen",
+    "Features": "Games, Camera, Alarm",
+    "Strap Material": "Soft Silicone",
+    "Battery": "Rechargeable included"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664532159_0_811.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664532159_0_811.jpeg",
+    "/images/products/variety_img_1771664532264_1_125.jpeg",
+    "/images/products/variety_img_1771664532427_2_900.jpeg",
+    "/images/products/variety_img_1771664532539_3_161.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_8399",
+  "name": "TAOSTRY LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch_TSTY44 Smartwatch",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.7,
+  "review_count": 1358,
+  "description": "TAOSTRY LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch_TSTY44 Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Kids Smartwatch",
+    "Display": "Digital Touch Screen",
+    "Features": "Games, Camera, Alarm",
+    "Strap Material": "Soft Silicone",
+    "Battery": "Rechargeable included"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664532626_4_278.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664532626_4_278.jpeg",
+    "/images/products/variety_img_1771664532732_5_564.jpeg",
+    "/images/products/variety_img_1771664532923_6_599.jpeg",
+    "/images/products/variety_img_1771664533021_7_947.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_7415",
+  "name": "EDENSCOPE Teenagers LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch Smartwatch",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.8,
+  "review_count": 1617,
+  "description": "EDENSCOPE Teenagers LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Kids Smartwatch",
+    "Display": "Digital Touch Screen",
+    "Features": "Games, Camera, Alarm",
+    "Strap Material": "Soft Silicone",
+    "Battery": "Rechargeable included"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664533141_8_826.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664533141_8_826.jpeg",
+    "/images/products/variety_img_1771664533265_9_262.jpeg",
+    "/images/products/variety_img_1771664533359_10_983.jpeg",
+    "/images/products/variety_img_1771664533384_11_978.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_7324",
+  "name": "TAOSTRY LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch_TSTY14 Smartwatch",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.7,
+  "review_count": 2639,
+  "description": "TAOSTRY LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch_TSTY14 Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Kids Smartwatch",
+    "Display": "Digital Touch Screen",
+    "Features": "Games, Camera, Alarm",
+    "Strap Material": "Soft Silicone",
+    "Battery": "Rechargeable included"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664533489_12_849.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664533489_12_849.jpeg",
+    "/images/products/variety_img_1771664533644_13_904.jpeg",
+    "/images/products/variety_img_1771664533747_14_163.jpeg",
+    "/images/products/variety_img_1771664533947_15_185.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_8230",
+  "name": "Noise Explorer 2 for Kids 2-way Video & Voice Calling, Geofencing, Emergency Alerts Smartwatch",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.8,
+  "review_count": 1880,
+  "description": "Noise Explorer 2 for Kids 2-way Video & Voice Calling, Geofencing, Emergency Alerts Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Kids Smartwatch",
+    "Display": "Digital Touch Screen",
+    "Features": "Games, Camera, Alarm",
+    "Strap Material": "Soft Silicone",
+    "Battery": "Rechargeable included"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664534151_16_307.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664534151_16_307.jpeg",
+    "/images/products/variety_img_1771664534287_17_480.jpeg",
+    "/images/products/variety_img_1771664534458_18_251.jpeg",
+    "/images/products/variety_img_1771664534563_19_537.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_8587",
+  "name": "HLMT Teenagers LED Luxurious Fashion Silicone Digital Watch (Not smart watch) Smartwatch",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.5,
+  "review_count": 2727,
+  "description": "HLMT Teenagers LED Luxurious Fashion Silicone Digital Watch (Not smart watch) Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Kids Smartwatch",
+    "Display": "Digital Touch Screen",
+    "Features": "Games, Camera, Alarm",
+    "Strap Material": "Soft Silicone",
+    "Battery": "Rechargeable included"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664534675_20_848.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664534675_20_848.jpeg",
+    "/images/products/variety_img_1771664534787_21_920.jpeg",
+    "/images/products/variety_img_1771664534890_22_288.jpeg",
+    "/images/products/variety_img_1771664534992_23_185.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_3330",
+  "name": "HLMT Teenagers LED Luxurious Fashion Silicone Digital Watch (Not smart watch) Smartwatch",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.7,
+  "review_count": 1119,
+  "description": "HLMT Teenagers LED Luxurious Fashion Silicone Digital Watch (Not smart watch) Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Kids Smartwatch",
+    "Display": "Digital Touch Screen",
+    "Features": "Games, Camera, Alarm",
+    "Strap Material": "Soft Silicone",
+    "Battery": "Rechargeable included"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664535116_24_111.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664535116_24_111.jpeg",
+    "/images/products/variety_img_1771664535225_25_166.jpeg",
+    "/images/products/variety_img_1771664535322_26_727.jpeg",
+    "/images/products/variety_img_1771664535422_27_84.jpeg"
+  ]
+},
+{
+  "id": "toy_variety_1771664536187_4353",
+  "name": "EDENSCOPE Teenagers LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch Smartwatch",
+  "price": 99,
+  "original_price": 1299,
+  "rating": 4.6,
+  "review_count": 2485,
+  "description": "EDENSCOPE Teenagers LED Luxurious Fashion Silicone (Not Smart Watch) Digital Watch Smartwatch is an attractive, durable product designed for hours of creative play. Features a premium exterior and powerful performance.",
+  "highlights": {
+    "Type": "Kids Smartwatch",
+    "Display": "Digital Touch Screen",
+    "Features": "Games, Camera, Alarm",
+    "Strap Material": "Soft Silicone",
+    "Battery": "Rechargeable included"
+  },
+  "badge": "Assured",
+  "image_url": "/images/products/variety_img_1771664535618_28_777.jpeg",
+  "images": [
+    "/images/products/variety_img_1771664535618_28_777.jpeg",
+    "/images/products/variety_img_1771664535721_29_39.jpeg",
+    "/images/products/variety_img_1771664535815_30_992.jpeg",
+    "/images/products/variety_img_1771664535906_31_55.jpeg"
   ]
 },
 {
