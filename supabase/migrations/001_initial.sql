@@ -50,8 +50,17 @@ ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
 ALTER TABLE settings ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Allow read products" ON products FOR SELECT USING (true);
-CREATE POLICY "Allow insert orders" ON orders FOR INSERT WITH CHECK (true);
-CREATE POLICY "Allow read orders" ON orders FOR SELECT USING (true);
-CREATE POLICY "Allow update orders" ON orders FOR UPDATE USING (true);
-CREATE POLICY "Allow read settings" ON settings FOR SELECT USING (true);
-CREATE POLICY "Allow update settings" ON settings FOR UPDATE USING (true);
+
+CREATE POLICY "Allow all on orders" ON orders FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Allow all on settings" ON settings FOR ALL USING (true) WITH CHECK (true);
+
+-- Storage Policies (Run these in Supabase SQL Editor if using storage)
+-- NOTE: Replace 'public-assets' with your actual bucket name if different
+/*
+INSERT INTO storage.buckets (id, name, public) VALUES ('public-assets', 'public-assets', true) ON CONFLICT DO NOTHING;
+
+CREATE POLICY "Public Access" ON storage.objects FOR SELECT USING (bucket_id = 'public-assets');
+CREATE POLICY "Admin Upload" ON storage.objects FOR INSERT WITH CHECK (bucket_id = 'public-assets');
+CREATE POLICY "Admin Update" ON storage.objects FOR UPDATE USING (bucket_id = 'public-assets');
+CREATE POLICY "Admin Delete" ON storage.objects FOR DELETE USING (bucket_id = 'public-assets');
+*/

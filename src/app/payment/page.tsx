@@ -20,8 +20,14 @@ function PaymentContent() {
 
   useEffect(() => {
     async function fetchQrCode() {
-      console.log('Fetching QR code...');
-      if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const isConfigured = supabaseUrl && !supabaseUrl.includes('your-project');
+
+      console.log('[QR] Fetching QR code...');
+      console.log('[ENV] Supabase URL configured:', !!supabaseUrl);
+      console.log('[ENV] Using placeholder:', !isConfigured);
+
+      if (isConfigured) {
         try {
           const { supabase } = await import('@/lib/supabase');
           const { data, error } = await supabase.from('settings').select('*').eq('id', 'qr_code').single();
@@ -30,11 +36,13 @@ function PaymentContent() {
           } else if (data) {
             console.log('[SUPABASE] QR Code found:', data.value);
             setQrCode(data.value);
-            setQrError(false); // Reset error if we have a value
+            setQrError(false);
           }
         } catch (err) {
           console.error('[SUPABASE] Connection failed:', err);
         }
+      } else {
+        console.warn('[QR] Supabase not configured in environment variables.');
       }
       setFetchingQr(false);
     }
