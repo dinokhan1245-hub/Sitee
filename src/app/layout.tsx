@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Flipkart - Online Shopping',
-  description: 'Shop toys and more at best prices',
+  title: 'ToysDeal - Online Toy Store',
+  description: 'Shop the best toys, games, and gifts for kids of all ages at ToysDeal.',
 };
 
 export default function RootLayout({
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen font-sans">{children}</body>
+      <body className="min-h-screen font-sans flex flex-col">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
