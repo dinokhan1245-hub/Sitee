@@ -111,22 +111,45 @@ export default function AdminPage() {
         try {
           const base64Url = await compressImage(qrFile);
 
-          // Force check the upsert result. If the payload is too large, it throws error here.
-          const { error: upsertError } = await supabase.from('settings').upsert({ id: 'qr_code_file', value: base64Url });
-          if (upsertError) throw new Error(upsertError.message);
+          // Convert the compressed base64 string back to a file/blob for Storage upload
+          const res = await fetch(base64Url);
+          const blob = await res.blob();
+
+          const fileExt = 'jpeg';
+          const fileName = `qr-code-${Date.now()}.${fileExt}`;
+          const filePath = `admin/${fileName}`;
+
+          // Upload the tiny compressed blob to the public-assets Storage bucket
+          const { error: uploadError } = await supabase.storage
+            .from('public-assets')
+            .upload(filePath, blob, {
+              contentType: 'image/jpeg',
+              upsert: true
+            });
+
+          if (uploadError) throw new Error(`Storage Error: ${uploadError.message}`);
+
+          // Get the public URL of the successfully uploaded image
+          const { data: { publicUrl } } = supabase.storage
+            .from('public-assets')
+            .getPublicUrl(filePath);
+
+          // Save the public URL to the database settings
+          const { error: upsertError } = await supabase.from('settings').upsert({ id: 'qr_code_file', value: publicUrl });
+          if (upsertError) throw new Error(`Database Error: ${upsertError.message}`);
 
           await Promise.all([
             supabase.from('settings').delete().eq('id', 'qr_code_url'),
             supabase.from('settings').delete().eq('id', 'qr_code'), // Clear legacy
           ]);
 
-          setQrStorageUrl(base64Url);
+          setQrStorageUrl(publicUrl);
           setQrUrl('');
           setQrFile(null);
-          alert('Image compressed successfully and saved securely to the database!');
+          alert('Image compressed successfully and uploaded securely to your public-assets bucket!');
         } catch (error: any) {
           console.error("QR Save Error:", error);
-          alert(`Database Error: Could not save image. It might still be too large, or network is failing. Message: ${error.message}`);
+          alert(`Failed to save image. Message: ${error.message}`);
         }
         setSavingQr(false);
         return;
