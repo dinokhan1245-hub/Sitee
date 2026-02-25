@@ -76,16 +76,37 @@ export default function AdminPage() {
         const fileName = `qr-code-${Date.now()}.${fileExt}`;
         const filePath = `admin/${fileName}`;
 
-        const { error: uploadError } = await supabase.storage
-          .from('public-assets')
-          .upload(filePath, qrFile, { upsert: true });
+        // Bypass Next.js standard fetch polyfill issues with binary files by using XMLHttpRequest
+        const uploadResult = await new Promise((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+          const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+          const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-        if (uploadError) {
-          alert(`Failed to upload: ${uploadError.message}`);
-          setSavingQr(false);
-          return;
-        }
+          xhr.open('POST', `${supabaseUrl}/storage/v1/object/public-assets/${filePath}`, true);
+          xhr.setRequestHeader('apikey', anonKey!);
+          xhr.setRequestHeader('Authorization', `Bearer ${anonKey}`);
+          // Do NOT set Content-Type here; let the browser set it automatically with the boundary for FormData
 
+          xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              resolve(JSON.parse(xhr.responseText));
+            } else {
+              reject(new Error(xhr.responseText || 'Failed to upload'));
+            }
+          };
+
+          xhr.onerror = function () {
+            reject(new Error('Network error (Failed to fetch). Please check your connection or adblocker.'));
+          };
+
+          // FormData handles the binary payload correctly
+          const formData = new FormData();
+          formData.append('', qrFile); // Supabase expects the file in the body
+
+          xhr.send(qrFile); // Sending raw file works better for Supabase Storage REST than FormData sometimes
+        });
+
+        // Get Public URL
         const { data: { publicUrl } } = supabase.storage
           .from('public-assets')
           .getPublicUrl(filePath);
