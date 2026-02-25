@@ -72,62 +72,30 @@ export default function AdminPage() {
     if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
       if (qrFile) {
         try {
-          // Upload File Path
-          const fileExt = qrFile.name.split('.').pop();
-          const fileName = `qr-code-${Date.now()}.${fileExt}`;
-          const filePath = `admin/${fileName}`;
-
-          // Bypass Next.js standard fetch polyfill issues with binary files by using XMLHttpRequest
-          const uploadResult = await new Promise((resolve, reject) => {
-            const xhr = new XMLHttpRequest();
-            const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-            const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-            xhr.open('POST', `${supabaseUrl}/storage/v1/object/public-assets/${filePath}`, true);
-            xhr.setRequestHeader('apikey', anonKey!);
-            xhr.setRequestHeader('Authorization', `Bearer ${anonKey}`);
-            // Do NOT set Content-Type here; let the browser set it automatically with the boundary for FormData
-
-            xhr.onload = function () {
-              if (xhr.status >= 200 && xhr.status < 300) {
-                resolve(JSON.parse(xhr.responseText));
-              } else {
-                reject(new Error(xhr.responseText || 'Failed to upload'));
-              }
-            };
-
-            xhr.onerror = function () {
-              reject(new Error('Network error (Failed to fetch). Please check your connection or adblocker.'));
-            };
-
-            // FormData handles the binary payload correctly
-            const formData = new FormData();
-            formData.append('', qrFile); // Supabase expects the file in the body
-
-            xhr.send(qrFile); // Sending raw file works better for Supabase Storage REST than FormData sometimes
+          // Convert image to Base64 String to completely bypass network upload errors (like CORS or Adblockers)
+          const base64Url = await new Promise<string>((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(qrFile);
+            reader.onload = () => resolve(reader.result as string);
+            reader.onerror = error => reject(error);
           });
 
-          // Get Public URL
-          const { data: { publicUrl } } = supabase.storage
-            .from('public-assets')
-            .getPublicUrl(filePath);
-
-          // Save UPLOADED setting and CLEAR URL settings to ensure priority
+          // Save Base64 string directly to database and CLEAR URL settings to ensure priority
           await Promise.all([
-            supabase.from('settings').upsert({ id: 'qr_code_file', value: publicUrl }),
+            supabase.from('settings').upsert({ id: 'qr_code_file', value: base64Url }),
             supabase.from('settings').delete().eq('id', 'qr_code_url'),
             supabase.from('settings').delete().eq('id', 'qr_code'), // Clear legacy
           ]);
 
-          setQrStorageUrl(publicUrl);
+          setQrStorageUrl(base64Url);
           setQrUrl('');
           setQrFile(null);
-          alert('Image saved! It is now the ONLY active QR source.');
+          alert('Image saved successfully directly to the database! It is now the ONLY active QR source.');
         } catch (error: any) {
-          alert(`Failed to upload: ${error.message}`);
-          setSavingQr(false);
-          return;
+          alert(`Failed to save image: ${error.message}`);
         }
+        setSavingQr(false);
+        return;
       } else if (qrUrl.trim()) {
         const urlToSave = qrUrl.trim();
         // Save URL setting and CLEAR UPLOADED setting
