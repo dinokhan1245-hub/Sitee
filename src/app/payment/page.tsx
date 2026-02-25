@@ -11,7 +11,7 @@ function PaymentContent() {
   const router = useRouter();
   const orderId = searchParams.get('order') || '';
   const [secondsLeft, setSecondsLeft] = useState(PAYMENT_DURATION_SEC);
-  const [qrCode, setQrCode] = useState('');
+  const [qrCode, setQrCode] = useState<string | null>(null);
   const [fetchingQr, setFetchingQr] = useState(true);
   const [qrError, setQrError] = useState(false);
   const [utr, setUtr] = useState('');
@@ -19,39 +19,13 @@ function PaymentContent() {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    async function fetchQr() {
-      const isConfigured = process.env.NEXT_PUBLIC_SUPABASE_URL && !process.env.NEXT_PUBLIC_SUPABASE_URL.includes('your-project');
-
-      if (!isConfigured) {
-        setFetchingQr(false);
-        return;
-      }
-
-      try {
-        const { supabase } = await import('@/lib/supabase');
-        // Fetch ALL settings at once to avoid multiple narrow queries
-        const { data, error } = await supabase.from('settings').select('id, value');
-
-        if (error) {
-          console.error('[SUPABASE] Fetch error:', error.message);
-        } else if (data) {
-          const settings = data as { id: string, value: string }[];
-          const fileQr = settings.find(s => s.id === 'qr_code_file')?.value;
-          const urlQr = settings.find(s => s.id === 'qr_code_url')?.value;
-          const legacyQr = settings.find(s => s.id === 'qr_code')?.value;
-
-          const finalQr = fileQr || urlQr || legacyQr || '';
-          if (finalQr) {
-            setQrCode(finalQr);
-            setQrError(false);
-          }
-        }
-      } catch (err) {
-        console.error('[SUPABASE] Unexpected error:', err);
-      }
+    // Hardcoded QR bypass: Load the QR code directly from the public static assets
+    // This completely prevents adblockers, Vercel Edge limits, and Supabase CORS issues from breaking the payment page.
+    setTimeout(() => {
+      setQrCode('/paytm_qr.png');
+      setQrError(false);
       setFetchingQr(false);
-    }
-    fetchQr();
+    }, 500); // Small artificial delay to show skeleton loader to user for better UX
   }, []);
 
   useEffect(() => {
