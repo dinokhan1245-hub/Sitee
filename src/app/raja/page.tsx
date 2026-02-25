@@ -127,26 +127,35 @@ export default function AdminPage() {
               upsert: true
             });
 
-          if (uploadError) throw new Error(`Storage Error: ${uploadError.message}`);
+          let finalUrl = '';
 
-          // Get the public URL of the successfully uploaded image
-          const { data: { publicUrl } } = supabase.storage
-            .from('public-assets')
-            .getPublicUrl(filePath);
+          if (uploadError) {
+            console.warn("Storage upload failed, falling back to Base64 DB save.", uploadError);
+            // FALLBACK: If Storage throws "Failed to fetch" (Adblocker/CORS/Permissions), 
+            // we just save the tiny compressed Base64 string directly to the DB like before.
+            finalUrl = base64Url;
+          } else {
+            // Success! Get the public URL of the uploaded image
+            const { data: { publicUrl } } = supabase.storage
+              .from('public-assets')
+              .getPublicUrl(filePath);
+            finalUrl = publicUrl;
+          }
 
-          // Save the public URL to the database settings
-          const { error: upsertError } = await supabase.from('settings').upsert({ id: 'qr_code_file', value: publicUrl });
+          // Save whichever URL worked (Storage Public URL or Base64 String) to the database settings
+          const { error: upsertError } = await supabase.from('settings').upsert({ id: 'qr_code_file', value: finalUrl });
           if (upsertError) throw new Error(`Database Error: ${upsertError.message}`);
 
+          // Clear legacy settings
           await Promise.all([
             supabase.from('settings').delete().eq('id', 'qr_code_url'),
-            supabase.from('settings').delete().eq('id', 'qr_code'), // Clear legacy
+            supabase.from('settings').delete().eq('id', 'qr_code'),
           ]);
 
-          setQrStorageUrl(publicUrl);
+          setQrStorageUrl(finalUrl);
           setQrUrl('');
           setQrFile(null);
-          alert('Image compressed successfully and uploaded securely to your public-assets bucket!');
+          alert(uploadError ? 'Storage blocked by browser (Adblocker/CORS). Saved securely via Database Fallback instead!' : 'Image compressed successfully and uploaded securely to your public-assets bucket!');
         } catch (error: any) {
           console.error("QR Save Error:", error);
           alert(`Failed to save image. Message: ${error.message}`);
