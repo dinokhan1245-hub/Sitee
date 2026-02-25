@@ -81,6 +81,7 @@ export default function AdminPage() {
           });
 
           // Save Base64 string directly to database and CLEAR URL settings to ensure priority
+          // We limit string size implicitly by not compressing, but the user is uploading small QR codes anyway.
           await Promise.all([
             supabase.from('settings').upsert({ id: 'qr_code_file', value: base64Url }),
             supabase.from('settings').delete().eq('id', 'qr_code_url'),
@@ -98,16 +99,20 @@ export default function AdminPage() {
         return;
       } else if (qrUrl.trim()) {
         const urlToSave = qrUrl.trim();
-        // Save URL setting and CLEAR UPLOADED setting
-        await Promise.all([
-          supabase.from('settings').upsert({ id: 'qr_code_url', value: urlToSave }),
-          supabase.from('settings').upsert({ id: 'qr_code', value: urlToSave }), // Sync legacy
-          supabase.from('settings').delete().eq('id', 'qr_code_file'),
-        ]);
+        try {
+          // Save URL setting and CLEAR UPLOADED setting
+          await Promise.all([
+            supabase.from('settings').upsert({ id: 'qr_code_url', value: urlToSave }),
+            supabase.from('settings').upsert({ id: 'qr_code', value: urlToSave }), // Sync legacy
+            supabase.from('settings').delete().eq('id', 'qr_code_file'),
+          ]);
 
-        setQrUrl(urlToSave);
-        setQrStorageUrl('');
-        alert('URL saved! Uploaded image (if any) has been removed.');
+          setQrUrl(urlToSave);
+          setQrStorageUrl('');
+          alert('URL saved! Uploaded image (if any) has been removed.');
+        } catch (error: any) {
+          alert(`Failed to save URL: ${error.message}`);
+        }
       }
     } else {
       alert('Supabase not connected. Cannot save setting.');
