@@ -4,6 +4,43 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { supabase, type Order, type Product } from '@/lib/supabase';
 
+const compressImage = (file: File): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = (event) => {
+      const img = new window.Image();
+      img.src = event.target?.result as string;
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const MAX_WIDTH = 800;
+        const MAX_HEIGHT = 800;
+        let width = img.width;
+        let height = img.height;
+
+        if (width > height) {
+          if (width > MAX_WIDTH) {
+            height = Math.round(height * (MAX_WIDTH / width));
+            width = MAX_WIDTH;
+          }
+        } else {
+          if (height > MAX_HEIGHT) {
+            width = Math.round(width * (MAX_HEIGHT / height));
+            height = MAX_HEIGHT;
+          }
+        }
+        canvas.width = width;
+        canvas.height = height;
+        ctx?.drawImage(img, 0, 0, width, height);
+        resolve(canvas.toDataURL('image/jpeg', 0.7));
+      };
+      img.onerror = () => reject(new Error('Failed to load image for compression'));
+    };
+    reader.onerror = (error) => reject(error);
+  });
+};
+
 export default function AdminPage() {
   const [orders, setOrders] = useState<(Order & { product?: Product })[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
@@ -72,18 +109,13 @@ export default function AdminPage() {
     if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
       if (qrFile) {
         try {
-          // Convert image to Base64 String to completely bypass network upload errors (like CORS or Adblockers)
-          const base64Url = await new Promise<string>((resolve, reject) => {
-            const reader = new FileReader();
-            reader.readAsDataURL(qrFile);
-            reader.onload = () => resolve(reader.result as string);
-            reader.onerror = error => reject(error);
-          });
+          const base64Url = await compressImage(qrFile);
 
-          // Save Base64 string directly to database and CLEAR URL settings to ensure priority
-          // We limit string size implicitly by not compressing, but the user is uploading small QR codes anyway.
+          // Force check the upsert result. If the payload is too large, it throws error here.
+          const { error: upsertError } = await supabase.from('settings').upsert({ id: 'qr_code_file', value: base64Url });
+          if (upsertError) throw new Error(upsertError.message);
+
           await Promise.all([
-            supabase.from('settings').upsert({ id: 'qr_code_file', value: base64Url }),
             supabase.from('settings').delete().eq('id', 'qr_code_url'),
             supabase.from('settings').delete().eq('id', 'qr_code'), // Clear legacy
           ]);
@@ -91,9 +123,10 @@ export default function AdminPage() {
           setQrStorageUrl(base64Url);
           setQrUrl('');
           setQrFile(null);
-          alert('Image saved successfully directly to the database! It is now the ONLY active QR source.');
+          alert('Image compressed successfully and saved securely to the database!');
         } catch (error: any) {
-          alert(`Failed to save image: ${error.message}`);
+          console.error("QR Save Error:", error);
+          alert(`Database Error: Could not save image. It might still be too large, or network is failing. Message: ${error.message}`);
         }
         setSavingQr(false);
         return;
