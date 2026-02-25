@@ -14,8 +14,9 @@ const compressImage = (file: File): Promise<string> => {
       img.onload = () => {
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
-        const MAX_WIDTH = 800;
-        const MAX_HEIGHT = 800;
+        // Extremely aggressive compression to guarantee bypassing all Vercel/Supabase Edge payload limits
+        const MAX_WIDTH = 400;
+        const MAX_HEIGHT = 400;
         let width = img.width;
         let height = img.height;
 
@@ -33,7 +34,8 @@ const compressImage = (file: File): Promise<string> => {
         canvas.width = width;
         canvas.height = height;
         ctx?.drawImage(img, 0, 0, width, height);
-        resolve(canvas.toDataURL('image/jpeg', 0.7));
+        // Compress to 40% quality. QR codes are high-contrast and survive compression very well.
+        resolve(canvas.toDataURL('image/jpeg', 0.4));
       };
       img.onerror = () => reject(new Error('Failed to load image for compression'));
     };
@@ -143,8 +145,22 @@ export default function AdminPage() {
           }
 
           // Save whichever URL worked (Storage Public URL or Base64 String) to the database settings
-          const { error: upsertError } = await supabase.from('settings').upsert({ id: 'qr_code_file', value: finalUrl });
-          if (upsertError) throw new Error(`Database Error: ${upsertError.message}`);
+          // We use a direct fetch here as a secondary bulletproof fallback just in case the Supabase JS client itself is breaking the POST request on Vercel
+          const dbResponse = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/settings?id=eq.qr_code_file`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string,
+              'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
+              'Prefer': 'resolution=merge-duplicates'
+            },
+            body: JSON.stringify({ id: 'qr_code_file', value: finalUrl })
+          });
+
+          if (!dbResponse.ok) {
+            const errText = await dbResponse.text();
+            throw new Error(`Database Error (${dbResponse.status}): ${errText}`);
+          }
 
           // Clear legacy settings
           await Promise.all([
