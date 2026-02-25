@@ -43,6 +43,21 @@ const compressImage = (file: File): Promise<string> => {
   });
 };
 
+function dataURItoBlob(dataURI: string) {
+  // convert base64 to raw binary data held in a string
+  const byteString = atob(dataURI.split(',')[1]);
+  // separate out the mime component
+  const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+  // write the bytes of the string to an ArrayBuffer
+  const ab = new ArrayBuffer(byteString.length);
+  const ia = new Uint8Array(ab);
+  for (let i = 0; i < byteString.length; i++) {
+    ia[i] = byteString.charCodeAt(i);
+  }
+  // write the ArrayBuffer to a blob
+  return new Blob([ab], { type: mimeString });
+}
+
 export default function AdminPage() {
   const [orders, setOrders] = useState<(Order & { product?: Product })[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
@@ -113,9 +128,8 @@ export default function AdminPage() {
         try {
           const base64Url = await compressImage(qrFile);
 
-          // Convert the compressed base64 string back to a file/blob for Storage upload
-          const res = await fetch(base64Url);
-          const blob = await res.blob();
+          // Convert compressed Base64 string to Blob native (bypasses browser fetch blocks on data: URIs)
+          const blob = dataURItoBlob(base64Url);
 
           const fileExt = 'jpeg';
           const fileName = `qr-code-${Date.now()}.${fileExt}`;
